@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+::selection {
+    background-color: $clr1;
+    color: #fff;
+}
+
+html {
+    font-family: Poppins-Light;
+    font-size: rem(18px);
+    color: $clr2;
+    line-height: 1.6;
+}
+
+body {
+    background-color:antiquewhite;
+}
+
+img {
+    width: 100%;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: Poppins-Regular;
+    font-weight: normal;
+    line-height: 1;
+}
+
+button{
+    font-family: inherit;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+a{
+    color: $clr3;
+    outline: none;
+    text-decoration: none;
+}

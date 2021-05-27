@@ -1,0 +1,21 @@
+
+.primary-btn {
+    font-family: Poppins-Regular;
+    font-size: em(16px);
+    padding: em(6px) em(15px);
+    background-color: $clr1;
+    border-radius: rem(25px);
+    transition: color .3s;
+
+    &:hover{
+        color: $clr2;
+    }
+
+    &:active{
+        color: $clr2;
+    }
+}
+
+.btn-grd {
+    background: linear-gradient(185deg, clr4 0%, $clr5 100%);
+}
