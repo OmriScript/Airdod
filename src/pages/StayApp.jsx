@@ -1,7 +1,28 @@
-export function StayApp() {
-    return (
-        <section>
-            <h1>StayApp</h1>
-        </section>
-    )
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { StayList } from '../cmps/StayList.jsx'
+import { getStays } from '../store/actions/stay.actions.js'
+
+
+export class _StayApp extends Component {
+    render() {
+        const stays = this.props.stays
+        return (
+            <section>
+                <StayList stays={stays} />
+            </section>
+        )
+    }
 }
+
+function mapStateToProps(state) {
+    return {
+        stays: state.stayModule.stays
+    }
+}
+
+const mapDispatchToProps = {
+    getStays
+}
+
+export const StayApp = connect(mapStateToProps, mapDispatchToProps)(_StayApp)

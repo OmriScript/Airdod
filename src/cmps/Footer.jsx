@@ -1,7 +1,7 @@
 export function Footer() {
     return (
-        <section>
+        <footer>
             <h1>Footer</h1>
-        </section>
+        </footer>
     )
 }
