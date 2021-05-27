@@ -10,8 +10,5 @@ export function StayList({ stays }) {
         </section>
     )
 }
-<<<<<<< HEAD
 
  
-=======
->>>>>>> 39c09b98a21fbc2c7dc4b6992eac5381c4aa54c3
