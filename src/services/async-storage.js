@@ -1,7 +1,7 @@
 import { utilService } from './util-service.js'
 export const asyncStorage = {
     query,
-    get,
+    getOne,
     post,
     put,
     remove,
@@ -10,18 +10,18 @@ export const asyncStorage = {
 
 async function query(entityType, filterBy) {
     try {
-        const { price, stayType, amenities, stayRules } = filterBy
+        // const { price, stayType, amenities, stayRules } = filterBy
         const entities = await JSON.parse(localStorage.getItem(entityType)) || []
-        entities.filter(entity => {
-            return entity.price === price
-        })
+        // entities.filter(entity => {
+        //     return entity.price === price
+        // })
         return entities
     } catch (err) {
         console.log('failed to load', err)
     }
 }
 
-async function get(entityType, entityId) {
+async function getOne(entityType, entityId) {
     try {
         const entities = await query(entityType)
         return entities.find(entity => entity._id === entityId)

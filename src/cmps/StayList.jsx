@@ -1,7 +1,12 @@
-export function StayList() {
+import { StayPreview } from './StayPreview.jsx';
+
+export function StayList({ stays }) {
     return (
-        <section>
-            <h1>StayList</h1>
+        <section className="stay-list flex">
+            {console.log('stays', stays)}
+            {stays.map(stay => {
+                return <StayPreview stay={stay} key={stay._id} />
+            })}
         </section>
     )
 }

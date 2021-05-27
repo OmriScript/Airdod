@@ -5,15 +5,28 @@ import { routes } from './routes'
 import { connect } from 'react-redux'
 import { AppHeader } from './cmps/AppHeader'
 import { Footer } from './cmps/Footer'
+// import { stayService } from './services/stay-service.js'
+import { getStays } from './store/actions/stay.actions.js'
 
 export class _App extends Component {
+
+  componentDidMount() {
+    this.props.getStays();
+  }
+
   render() {
+    const staysToShow = this.props.staysToShow
+    console.log('staysToShow', staysToShow)
+    if (!staysToShow) return 'Loading...'
+
     return (
-      <div className="App main-container" >
+      <div className="app main-container" >
         <AppHeader />
-        <Switch>
-          {routes.map(route => <Route key={route.path} exact component={route.component} path={route.path} />)}
-        </Switch>
+        <main>
+          <Switch>
+            {routes.map(route => <Route key={route.path} exact component={route.component} path={route.path} />)}
+          </Switch>
+        </main>
         <Footer />
       </div>
     )
@@ -22,8 +35,12 @@ export class _App extends Component {
 
 function mapStateToProps(state) {
   return {
-    state: 'change me'
+    staysToShow: state.stayModule.stays
   }
 }
 
-export const App = connect(mapStateToProps)(_App)
+const mapDispatchToProps = {
+  getStays
+}
+
+export const App = connect(mapStateToProps, mapDispatchToProps)(_App)

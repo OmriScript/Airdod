@@ -1,7 +1,11 @@
-export function StayPreview() {
+export function StayPreview({ stay }) {
     return (
         <section>
-            <h1>StayPreview</h1>
+            <div className="stay-image-container">
+                <img src={stay.imgUrls[0]} alt="house img" />
+            </div>
+            <h1>{stay.name}</h1>
+            <p>{stay.price}</p>
         </section>
     )
 }

@@ -1,12 +1,10 @@
 import { asyncStorage } from './async-storage.js'
 
-
 export const stayService = {
     query,
     getById,
     save,
     remove,
-
 }
 
 const KEY = 'stay'
@@ -57,23 +55,102 @@ const gStays = [
             "u101",
             "u102"
         ]
+    },
+    {
+        _id: "10006547",
+        name: "Charming Duplex",
+        imgUrls: [
+            "https://a0.muscache.com/im/pictures/e83e702f-ef49-40fb-8fa0-6512d7e26e9b.jpg?aki_policy=large",
+            "otherImg.jpg"
+        ],
+        price: 500.00,
+        summary: "Fantastic duplex apartment with three bedrooms, located in the historic area of Porto, Ribeira (Cube)...",
+        capacity: 2,
+        amenities: [
+            "TV",
+        ],
+        host: {
+            _id: "51399391",
+            fullname: "Davit Pok",
+            imgUrl: "https://a0.muscache.com/im/pictures/fab79f25-2e10-4f0f-9711-663cb69dc7d8.jpg?aki_policy=profile_small"
+        },
+        loc: {
+            country: "Portugal",
+            countryCode: "PT",
+            address: "Porto, Portugal",
+            lat: -8.61307,
+            lng: 41.1412
+        },
+    },
+    {
+        _id: "10006548",
+        name: "Ribeira Duplex",
+        imgUrls: [
+            "https://a0.muscache.com/im/pictures/e83e702f-ef49-40fb-8fa0-6512d7e26e9b.jpg?aki_policy=large",
+            "otherImg.jpg"
+        ],
+        price: 55.00,
+        summary: "Fantastic duplex apartment with three bedrooms, located in the historic area of Porto, Ribeira (Cube)...",
+        capacity: 5,
+        amenities: [
+            "TV",
+        ],
+        host: {
+            _id: "51399391",
+            fullname: "Davit Pok",
+            imgUrl: "https://a0.muscache.com/im/pictures/fab79f25-2e10-4f0f-9711-663cb69dc7d8.jpg?aki_policy=profile_small"
+        },
+        loc: {
+            country: "Portugal",
+            countryCode: "PT",
+            address: "Porto, Portugal",
+            lat: -8.61309,
+            lng: 41.1412
+        },
+    },
+    {
+        _id: "10006549",
+        name: "Very Charming Duplex",
+        imgUrls: [
+            "https://a0.muscache.com/im/pictures/e83e702f-ef49-40fb-8fa0-6512d7e26e9b.jpg?aki_policy=large",
+            "otherImg.jpg"
+        ],
+        price: 40.00,
+        summary: "Fantastic duplex apartment with three bedrooms, located in the historic area of Porto, Ribeira (Cube)...",
+        capacity: 7,
+        amenities: [
+            "TV",
+        ],
+        host: {
+            _id: "51399391",
+            fullname: "Davit Pok",
+            imgUrl: "https://a0.muscache.com/im/pictures/fab79f25-2e10-4f0f-9711-663cb69dc7d8.jpg?aki_policy=profile_small"
+        },
+        loc: {
+            country: "Portugal",
+            countryCode: "PT",
+            address: "Porto, Portugal",
+            lat: -8.61309,
+            lng: 40.1413
+        },
     }
 ]
 
-console.log('load');
-asyncStorage._save(KEY, gStays)
+asyncStorage._save(KEY, gStays);
 
 
 async function query(filterBy) {
     // const toys = await axios.get(BASE_URL, { params: filterBy })
     // return toys.data
-    return await asyncStorage.get(KEY, filterBy)
+    const res = await asyncStorage.query(KEY, filterBy)
+    return res
+    // return await asyncStorage.getOne(KEY, filterBy)
 }
 
 async function getById(toyId) {
     // const toy = axios.get(`${BASE_URL}/${toyId}`)
     // return toy.data
-    return await asyncStorage.get(toyId)
+    return await asyncStorage.getOne(toyId)
 }
 
 async function save(toy) {

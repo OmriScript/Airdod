@@ -1,9 +1,6 @@
 import { stayService } from '../../services/stay-service'
 
-export function getStays(filterBy = {
-    price: '',
-    amenities: ''
-}) {
+export function getStays(filterBy = { price: '', amenities: '' }) {
     return async dispatch => {
         try {
             const stays = await stayService.query(filterBy)
