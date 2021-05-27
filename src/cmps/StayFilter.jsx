@@ -27,7 +27,6 @@ export class StayFilter extends Component {
                         <input type="text" name="search" id="guest" placeholder="1 guest" />
                     </div>
                 </form>
-
             </section>
         )
     }
