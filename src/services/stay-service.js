@@ -1,10 +1,12 @@
-import storageService from './async-storage.js'
+import { asyncStorage } from './async-storage.js'
+
 
 export const stayService = {
     query,
     getById,
     save,
-    removeStay
+    remove,
+
 }
 
 const KEY = 'stay'
@@ -58,37 +60,34 @@ const gStays = [
     }
 ]
 
-loadStays();
+console.log('load');
+asyncStorage._save(KEY, gStays)
 
-function loadStays() {
-    console.log('load');
-    storageService._save(KEY, gStays)
-}
 
 async function query(filterBy) {
     // const toys = await axios.get(BASE_URL, { params: filterBy })
     // return toys.data
-    return await storageService.get(KEY, filterBy)
+    return await asyncStorage.get(KEY, filterBy)
 }
 
 async function getById(toyId) {
     // const toy = axios.get(`${BASE_URL}/${toyId}`)
     // return toy.data
-    return await storageService.get(toyId)
+    return await asyncStorage.get(toyId)
 }
 
 async function save(toy) {
     if (toy._id) {
         // return axios.put(`${BASE_URL}/${toy._id}`, toy).then(res => res.data)
-        return await storageService.put(KEY, toy)
+        return await asyncStorage.put(KEY, toy)
     } else {
         // return axios.post(BASE_URL, toy).then(res => res.data)
-        return await storageService.post(KEY, toy)
+        return await asyncStorage.post(KEY, toy)
     }
 }
 
-async function removeStay(stayId) {
+async function remove(stayId) {
     // const toy = await axios.delete(`${BASE_URL}/${toyId}`)
     // return toy.data
-    return await storageService.remove(KEY, stayId)
+    return await asyncStorage.remove(KEY, stayId)
 }

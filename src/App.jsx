@@ -9,7 +9,7 @@ import { Footer } from './cmps/Footer'
 export class _App extends Component {
   render() {
     return (
-      <div className="App" >
+      <div className="App main-container" >
         <AppHeader />
         <Switch>
           {routes.map(route => <Route key={route.path} exact component={route.component} path={route.path} />)}

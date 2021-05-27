@@ -1,5 +1,5 @@
 import { utilService } from './util-service.js'
-export const storageService = {
+export const asyncStorage = {
     query,
     get,
     post,
