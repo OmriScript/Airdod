@@ -10,24 +10,51 @@ html {
 }
 
 body {
+<<<<<<< HEAD
     background-color:$clr1;
+=======
+<<<<<<< HEAD
+    background-color: antiquewhite;
+=======
+    background-color:$clr1;
+>>>>>>> 643ec32ac9bdf6671ca702d3fa5072eec808f222
 }
 
-h1,h2,h3,h4,h5,h6 {
+img {
+    width: 100%;
+>>>>>>> d6524b2f73e295cb841aaa1f3341375b81cab3f4
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: Roboto-Bold;
     font-weight: normal;
 }
 
+<<<<<<< HEAD
 button{
     // font-family: inherit;
+=======
+button {
+    font-family: inherit;
+>>>>>>> d6524b2f73e295cb841aaa1f3341375b81cab3f4
     background-color: transparent;
     border: none;
     outline: none;
     cursor: pointer;
 }
 
+<<<<<<< HEAD
 a{
     // color: $clr3;
+=======
+a {
+    color: $clr3;
+>>>>>>> d6524b2f73e295cb841aaa1f3341375b81cab3f4
     outline: none;
     text-decoration: none;
 }

@@ -1,4 +1,4 @@
-.stay-filter {
+.stay-search {
     background-color: $clr1;
     border-radius: 2rem;
     width: rem(750px);
@@ -10,6 +10,7 @@
         border-radius: 2rem;
         input,
         label {
+            // padding: .6rem 0;
             border: none;
             outline: none;
             background-color: inherit;
@@ -18,22 +19,16 @@
         }
         button {
             border-radius: 50%;
-            margin: .5rem 0;
+            // margin: .2rem 0;
+            // max-height: rem(40px);
             height: 48px;
         }
         .search-input {
             border-radius: 2rem;
-            padding: .5rem 0;
             transition: ease-in-out .3s;
             padding-inline-start: 2rem;
             &:hover {
                 background-color: darken($clr1, 10%);
-            }
-            .date-container {
-                align-items: baseline;
-            }
-            span {
-                margin-inline-end: 1rem;
             }
         }
     }
