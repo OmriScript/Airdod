@@ -9,8 +9,6 @@ import { Footer } from './cmps/Footer'
 import 'react-dates/initialize'
 import { getStays } from './store/actions/stay.actions.js'
 
-
-
 export class _App extends Component {
 
   componentDidMount() {
@@ -20,8 +18,7 @@ export class _App extends Component {
   render() {
     const staysToShow = this.props.staysToShow
     console.log('staysToShow', staysToShow)
-    if (!staysToShow) return 'Loading...'
-
+    if (!staysToShow) return <h1>'Loading...'</h1>
     return (
       <div className="app main-container" >
         <AppHeader />
@@ -29,7 +26,7 @@ export class _App extends Component {
         <Switch>
           {routes.map(route => <Route key={route.path} exact component={route.component} path={route.path} />)}
         </Switch>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     )
   }
