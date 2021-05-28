@@ -6,11 +6,7 @@ import { DateRangePicker } from 'react-dates'
 import { connect } from 'react-redux'
 import { getStays } from '../store/actions/stay.actions.js'
 
-<<<<<<< HEAD
-export class Search extends Component {
-=======
 class _Search extends Component {
->>>>>>> d6524b2f73e295cb841aaa1f3341375b81cab3f4
 
     state = {
         startDate: '',

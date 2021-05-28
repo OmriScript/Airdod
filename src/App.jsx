@@ -1,9 +1,4 @@
 import './assets/styles/styles.scss'
-<<<<<<< HEAD
-import 'react-dates/initialize'
-
-=======
->>>>>>> d6524b2f73e295cb841aaa1f3341375b81cab3f4
 import { Component } from 'react'
 import { Route, Switch } from 'react-router-dom'
 import { routes } from './routes'
@@ -21,7 +16,7 @@ export class _App extends Component {
   render() {
     return (
       <div className="app main-container" >
-        {/* <AppHeader /> */}
+        <AppHeader />
         <Switch>
           {routes.map(route => <Route key={route.path} exact component={route.component} path={route.path} />)}
         </Switch>

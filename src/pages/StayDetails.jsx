@@ -19,18 +19,19 @@ export class StayDetails extends Component {
     async setStayDetails() {
         const { id } = this.props.match.params
         let stay = await stayService.getById(id)
-        stay.reviewsAvg = this.calcReviewsAvg(stay)
+        // stay.reviewsAvg = this.calcReviewsAvg(stay)
+        console.log('GOT:', stay)
         this.setState({ stay })
     }
 
-    calcReviewsAvg = (stay) => {
-        let reviews = stay.reviews
-        let total = 0;
-        for (let i = 0; i < reviews.length; i++) {
-            total += reviews[i].rate;
-        }
-        return total / reviews.length;
-    }
+    // calcReviewsAvg = (stay) => {
+    //     let reviews = stay.reviews
+    //     let total = 0;
+    //     for (let i = 0; i < reviews.length; i++) {
+    //         total += reviews[i].rate;
+    //     }
+    //     return total / reviews.length;
+    // }
 
     render() {
         const img1 = 'https://res.cloudinary.com/ariecloud/image/upload/v1606584668/users/londoning2_fzcrtp.jpg'
@@ -40,7 +41,7 @@ export class StayDetails extends Component {
         // const img5 = 'https://res.cloudinary.com/ariecloud/image/upload/v1606584668/users/londoning5_sgfmv5.jpg'
         if (!this.state.stay) return <h1>reloading</h1>
         const {
-            reviewsAvg,
+            // reviewsAvg,
             reviews,
             loc,
             name,
@@ -48,7 +49,7 @@ export class StayDetails extends Component {
             host
         } = this.state.stay
 
-        console.log('GOT:', this.state.stay)
+        // console.log('GOT:', this.state.stay)
 
         return (
             <section className="stay-details-container">
@@ -56,8 +57,8 @@ export class StayDetails extends Component {
                     <h1>{name}</h1>
                     <div>
                         <StarRateIcon />
-                        <span className="details-header-rate">
-                            {reviewsAvg}</span>
+                        {/* <span className="details-header-rate">
+                            {reviewsAvg}</span> */}
                         {reviews && <span className="details-header-reviwes">
                             ({reviews.length})Reviews
                             </span>}

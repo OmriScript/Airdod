@@ -65,15 +65,6 @@ const gStays = [
                 }
             },
             {
-<<<<<<< HEAD
-                id: "ui055",
-                txt: "Awosom place",
-                rate: 2.5,
-                by: {
-                    _id: "u102",
-                    fullname: "user2",
-                    imgUrl: "/img/img2.jpg"
-=======
                 id: "madeId103",
                 txt: "Very clear",
                 rate: 4,
@@ -81,7 +72,6 @@ const gStays = [
                     _id: "u103",
                     fullname: "user3",
                     imgUrl: "/img/img3.jpg"
->>>>>>> d6524b2f73e295cb841aaa1f3341375b81cab3f4
                 }
             }
         ],
@@ -476,9 +466,13 @@ async function query(filterBy) {
     // return await asyncStorage.getOne(KEY, filterBy)
 }
 
+// const i = await getById(10006547)
+// console.log(i)
+
 async function getById(id) {
     // const toy = axios.get(`${BASE_URL}/${toyId}`)
     // return toy.data
+    // console.log('GOT:id', id)
     return await asyncStorage.getOne(KEY, id)
 }
 
