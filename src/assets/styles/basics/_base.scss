@@ -17,7 +17,7 @@ html {
 }
 
 body {
-    background-color:antiquewhite;
+    background-color:$clr1;
 }
 
 img {
@@ -27,7 +27,6 @@ img {
 h1,h2,h3,h4,h5,h6 {
     font-family: Roboto-Bold;
     font-weight: normal;
-    line-height: 1;
 }
 
 button{

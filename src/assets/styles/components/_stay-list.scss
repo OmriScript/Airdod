@@ -1,12 +1,4 @@
-.stay-image-container {
-    width: 200px;
-    height: 200px;
-}
-
-.stay-image-container img {
-    width: 100%;
-}
-
 .stay-list {
-    grid-gap: 60px
+    grid-gap: 10px;
+    flex-wrap: wrap;
 }
