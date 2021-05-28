@@ -17,7 +17,6 @@ export class _App extends Component {
 
   render() {
     const staysToShow = this.props.staysToShow
-    console.log('staysToShow', staysToShow)
     if (!staysToShow) return 'Loading...'
 
     return (

@@ -11,26 +11,29 @@
 
 html {
     font-family: Roboto-Regular;
-    font-size: rem(18px);
     color: $clr2;
-    line-height: 1.6;
 }
 
 body {
-    background-color:antiquewhite;
+    background-color: antiquewhite;
 }
 
 img {
     width: 100%;
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: Roboto-Bold;
     font-weight: normal;
     line-height: 1;
 }
 
-button{
+button {
     font-family: inherit;
     background-color: transparent;
     border: none;
@@ -38,7 +41,7 @@ button{
     cursor: pointer;
 }
 
-a{
+a {
     color: $clr3;
     outline: none;
     text-decoration: none;
