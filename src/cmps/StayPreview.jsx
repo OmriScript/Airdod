@@ -1,11 +1,19 @@
+import { Link } from 'react-router-dom'
+import { ImageCarousel } from './ImageCarousel'
+import { ImageCarosuelM } from './ImageCarouselM'
+
+
 export function StayPreview({ stay }) {
     return (
-        <section>
-            <div className="stay-image-container">
-                <img src={stay.imgUrls[0]} alt="house img" />
-            </div>
-            <h1>{stay.name}</h1>
-            <p>{stay.price}</p>
+        <section className="stay-preview">
+            <Link to={`stay/${stay._id}`}>
+                <div className="stay-image-container">
+                    <ImageCarousel imgsSrc={stay.imgUrls} />
+                    {/* <ImageCarosuelM imgsSrc={stay.imgUrls} /> */}
+                </div>
+                <h1>{stay.name}</h1>
+                <p>{stay.price}</p>
+            </Link>
         </section>
     )
 }
