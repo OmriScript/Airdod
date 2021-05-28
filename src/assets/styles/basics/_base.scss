@@ -4,34 +4,22 @@
     padding: 0;
 }
 
-::selection {
-    background-color: $clr1;
-    color: #fff;
-}
-
 html {
     font-family: Roboto-Regular;
-    font-size: rem(18px);
     color: $clr2;
-    line-height: 1.6;
 }
 
 body {
-    background-color:antiquewhite;
-}
-
-img {
-    width: 100%;
+    background-color:$clr1;
 }
 
 h1,h2,h3,h4,h5,h6 {
     font-family: Roboto-Bold;
     font-weight: normal;
-    line-height: 1;
 }
 
 button{
-    font-family: inherit;
+    // font-family: inherit;
     background-color: transparent;
     border: none;
     outline: none;
@@ -39,7 +27,7 @@ button{
 }
 
 a{
-    color: $clr3;
+    // color: $clr3;
     outline: none;
     text-decoration: none;
 }

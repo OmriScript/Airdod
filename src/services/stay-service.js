@@ -52,12 +52,22 @@ const gStays = [
                     fullname: "user2",
                     imgUrl: "/img/img2.jpg"
                 }
+            },
+            {
+                id: "ui055",
+                txt: "Awosom place",
+                rate: 2.5,
+                by: {
+                    _id: "u102",
+                    fullname: "user2",
+                    imgUrl: "/img/img2.jpg"
+                }
             }
         ],
         likedByUserIds: [
             "u101",
             "u102"
-        ]
+        ],
     },
     {
         _id: "10006547",
@@ -150,7 +160,6 @@ const gStays = [
 
 asyncStorage._save(KEY, gStays);
 
-
 async function query(filterBy) {
     // const toys = await axios.get(BASE_URL, { params: filterBy })
     // return toys.data
@@ -159,10 +168,10 @@ async function query(filterBy) {
     // return await asyncStorage.getOne(KEY, filterBy)
 }
 
-async function getById(toyId) {
+async function getById(id) {
     // const toy = axios.get(`${BASE_URL}/${toyId}`)
     // return toy.data
-    return await asyncStorage.getOne(toyId)
+    return await asyncStorage.getOne(KEY, id)
 }
 
 async function save(toy) {
