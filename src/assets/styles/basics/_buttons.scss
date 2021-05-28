@@ -3,8 +3,9 @@
     font-size: em(1px);
     padding: em(6px) em(15px);
     background-color: $clr1;
-    border-radius: rem(25px);
     transition: color .3s;
+    min-width: 48px;
+    min-width: 48px;
 
     &:hover{
         color: $clr2;
@@ -16,5 +17,6 @@
 }
 
 .btn-grd {
-    background: linear-gradient(185deg, clr4 0%, $clr5 100%);
+    background: linear-gradient(185deg, $clr4 0%, $clr5 100%);
+   
 }

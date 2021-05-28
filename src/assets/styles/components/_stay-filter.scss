@@ -1,7 +1,7 @@
 .stay-filter {
     background-color: $clr1;
     border-radius: 2rem;
-    // width: rem(650px);
+    width: rem(750px);
     position: absolute;
     top: rem(150px);
     
@@ -15,15 +15,17 @@
             background-color: inherit;
             cursor: pointer;
             border-radius: 2rem;
-            // width: 100%;
+        }
+        button {
+            border-radius: 50%;
+            margin: .5rem 0;
+            height: 48px;
         }
         .search-input {
             border-radius: 2rem;
-            padding: .3rem 0;
+            padding: .5rem 0;
             transition: ease-in-out .3s;
             padding-inline-start: 2rem;
-            &:not(:last-child){
-            }
             &:hover {
                 background-color: darken($clr1, 10%);
             }
