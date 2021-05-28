@@ -20,6 +20,7 @@ const gStays = [
             "https://res.cloudinary.com/ariecloud/image/upload/v1606633000/houses/paris4_qyxvjr.jpg"
         ],
         price: 80.00,
+        type: 'Apartment',
         summary: "Fantastic duplex apartment with three bedrooms, located in the historic area of Porto, Ribeira (Cube)...",
         capacity: 8,
         amenities: [
@@ -90,6 +91,7 @@ const gStays = [
             "https://res.cloudinary.com/ariecloud/image/upload/v1606638010/houses/parisFive5_u96b18.jpg"
         ],
         price: 500.00,
+        type: 'Entire home',
         summary: "Fantastic duplex apartment with three bedrooms, located in the historic area of Porto, Ribeira (Cube)...",
         capacity: 2,
         amenities: [
@@ -119,6 +121,7 @@ const gStays = [
             "https://res.cloudinary.com/ariecloud/image/upload/v1606584668/users/londoning5_sgfmv5.jpg"
         ],
         price: 55.00,
+        type: 'Entire home',
         summary: "Fantastic duplex apartment with three bedrooms, located in the historic area of Porto, Ribeira (Cube)...",
         capacity: 5,
         amenities: [
@@ -148,6 +151,7 @@ const gStays = [
             "https://res.cloudinary.com/ariecloud/image/upload/v1606637481/houses/parisFour5_zvfav2.jpg"
         ],
         price: 40.00,
+        type: 'Studio',
         summary: "Fantastic duplex apartment with three bedrooms, located in the historic area of Porto, Ribeira (Cube)...",
         capacity: 7,
         amenities: [
@@ -177,6 +181,7 @@ const gStays = [
             "https://res.cloudinary.com/ariecloud/image/upload/v1606635715/houses/tokyoTwo3_q8wehk.jpg"
         ],
         price: 210.00,
+        type: 'Studio',
         summary: "This lovely two-bedroom apartment sleeping max 4 guests is located in the heart of Holland Park, just minutes away from multiple tube stations. The apartment has been recently refurbished in a modern style, featuring a fully equipped kitchen. It features comfortable furniture throughout the apartment.",
         capacity: 4,
         amenities: [
@@ -247,6 +252,7 @@ const gStays = [
             "https://res.cloudinary.com/ariecloud/image/upload/v1606635076/houses/tokyo5_an6j0x.jpg"
         ],
         price: 250.00,
+        type: 'Shared apartment',
         summary: "Comfortable furniture throughout the apartment.",
         capacity: 5,
         amenities: [
@@ -317,6 +323,7 @@ const gStays = [
             "https://res.cloudinary.com/ariecloud/image/upload/v1606476017/users/manhaten5_dtpzhl.jpg"
         ],
         price: 230.00,
+        type: 'Shared apartment',
         summary: "The apartment has been recently refurbished in a modern style, featuring a fully equipped kitchen. It features comfortable furniture throughout the apartment.",
         capacity: 6,
         amenities: [
@@ -387,6 +394,7 @@ const gStays = [
             "https://res.cloudinary.com/ariecloud/image/upload/v1606635732/users/new-newyork5_j8c4xy.jpg"
         ],
         price: 150.00,
+        type: 'Apartment',
         summary: "Just minutes away from multiple tube stations. The apartment has been recently refurbished in a modern style, featuring a fully equipped kitchen. It features comfortable furniture throughout the apartment.",
         capacity: 2,
         amenities: [
