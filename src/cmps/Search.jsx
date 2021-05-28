@@ -1,6 +1,6 @@
 import { Component } from 'react'
 
-export class StayFilter extends Component {
+export class Search extends Component {
 
     state = {
 
