@@ -1,11 +1,10 @@
 import './assets/styles/styles.scss'
-import React, { Component } from 'react'
+import { Component } from 'react'
 import { Route, Switch } from 'react-router-dom'
 import { routes } from './routes'
 import { connect } from 'react-redux'
 import { AppHeader } from './cmps/AppHeader'
 import { Footer } from './cmps/Footer'
-import 'react-dates/initialize'
 import { getStays } from './store/actions/stay.actions.js'
 
 

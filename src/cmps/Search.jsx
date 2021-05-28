@@ -1,6 +1,9 @@
+import 'react-dates/initialize'
 import { Component } from 'react'
+import SearchIcon from '@material-ui/icons/Search'
+import { DatePickerModal } from './DatePickerModal'
 
-export class StayFilter extends Component {
+export class Search extends Component {
 
     state = {
 
@@ -24,10 +27,19 @@ export class StayFilter extends Component {
                         </div>
                         <div className="date-container flex">
                             <div className="check-in flex">
-                                <input autoComplete="off" type="text" name="search" id="dates" placeholder="check in" />
+                                <input 
+                                autoComplete="off" 
+                                type="text" 
+                                name="search" 
+                                id="dates" 
+                                placeholder="check in" />
                             </div>
                             <div className="check-out">
-                                <input autoComplete="off" type="text" name="search" id="dates" placeholder="check out" />
+                                <input 
+                                autoComplete="off" 
+                                type="text" name="search" 
+                                id="dates" 
+                                placeholder="check out" />
                             </div>
                         </div>
                     </div>
@@ -36,11 +48,18 @@ export class StayFilter extends Component {
                             <label htmlFor="guest">guests</label>
                         </div>
                         <div className="guest-input">
-                            <input autoComplete="off" type="text" name="search" id="guest" placeholder="1 guest" />
+                            <input
+                                autoComplete="off"
+                                type="text" name="search"
+                                id="guest"
+                                placeholder="1 guest" />
                         </div>
                     </div>
-                    <button className="primary-btn btn-grd">1</button>
+                    <button className="primary-btn btn-grd">
+                        <SearchIcon />
+                    </button>
                 </form>
+                <DatePickerModal />
             </section>
         )
     }
