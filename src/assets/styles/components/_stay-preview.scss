@@ -1,5 +1,16 @@
-
-// .stay-preview img{
-//     z-index: -1;
-//     opacity: .5;
-// }
+.stay-preview {
+    width: 244px;
+    margin-bottom: 6px;
+    // height: 264;
+    // .stay-image-container {
+    //     width: 200px;
+    //     height: 200px;
+    // }
+    .stay-image-container {
+        margin-bottom: 25px;
+        img {
+            width: 100%;
+            border-radius: 8px;
+        }
+    }
+}

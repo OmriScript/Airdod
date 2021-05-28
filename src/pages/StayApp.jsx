@@ -4,7 +4,6 @@ import { StayList } from '../cmps/StayList.jsx'
 import { StayFilter } from '../cmps/StayFilter.jsx'
 import { getStays } from '../store/actions/stay.actions.js'
 
-
 export class _StayApp extends Component {
     render() {
         const stays = this.props.stays

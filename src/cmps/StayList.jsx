@@ -10,5 +10,3 @@ export function StayList({ stays }) {
         </section>
     )
 }
-
- 
