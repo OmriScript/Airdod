@@ -16,7 +16,7 @@ export class _App extends Component {
   render() {
     return (
       <div className="app main-container" >
-        <AppHeader />
+        {/* <AppHeader /> */}
         <Switch>
           {routes.map(route => <Route key={route.path} exact component={route.component} path={route.path} />)}
         </Switch>

@@ -6,6 +6,10 @@ import { DateRangePicker } from 'react-dates'
 import { connect } from 'react-redux'
 import { getStays } from '../store/actions/stay.actions.js'
 
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { faSearch } from '@fortawesome/free-solid-svg-icons'
+
+
 class _Search extends Component {
 
     state = {

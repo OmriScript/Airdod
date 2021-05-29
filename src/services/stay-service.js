@@ -38,6 +38,7 @@ const gStays = [
         },
         loc: {
             country: "Portugal",
+            city: "Porto",
             countryCode: "PT",
             address: "Porto, Portugal",
             lat: -8.61308,
@@ -75,6 +76,10 @@ const gStays = [
                 }
             }
         ],
+        houseRules: {
+            isPets: true,
+            isSmoking: false
+        },
         likedByUserIds: [
             "u101",
             "u102"
@@ -82,7 +87,7 @@ const gStays = [
     },
     {
         _id: "10006547",
-        name: "Charming Duplex",
+        name: "Balagan babalanga",
         imgUrls: [
             "https://res.cloudinary.com/ariecloud/image/upload/v1606638010/houses/parisFive1_feabwr.jpg",
             "https://res.cloudinary.com/ariecloud/image/upload/v1606638009/houses/parisFive2_u7yyny.jpg",
@@ -94,6 +99,10 @@ const gStays = [
         type: 'Entire home',
         summary: "Fantastic duplex apartment with three bedrooms, located in the historic area of Porto, Ribeira (Cube)...",
         capacity: 2,
+        houseRules: {
+            isPets: true,
+            isSmoking: false
+        },
         amenities: [
             "TV",
         ],
@@ -104,6 +113,7 @@ const gStays = [
         },
         loc: {
             country: "Portugal",
+            city: "Portofolio",
             countryCode: "PT",
             address: "Porto, Portugal",
             lat: -8.61307,
@@ -124,6 +134,10 @@ const gStays = [
         type: 'Entire home',
         summary: "Fantastic duplex apartment with three bedrooms, located in the historic area of Porto, Ribeira (Cube)...",
         capacity: 5,
+        houseRules: {
+            isPets: false,
+            isSmoking: true
+        },
         amenities: [
             "TV",
         ],
@@ -134,6 +148,7 @@ const gStays = [
         },
         loc: {
             country: "Portugal",
+            city: "Porto rico",
             countryCode: "PT",
             address: "Porto, Portugal",
             lat: -8.61309,
@@ -142,7 +157,7 @@ const gStays = [
     },
     {
         _id: "10006549",
-        name: "Very Charming Duplex",
+        name: "Very Charming Place",
         imgUrls: [
             "https://res.cloudinary.com/ariecloud/image/upload/v1606637481/houses/parisFour1_jxnu1d.jpg",
             "https://res.cloudinary.com/ariecloud/image/upload/v1606637481/houses/parisFour2_xbfuyv.jpg",
@@ -154,6 +169,10 @@ const gStays = [
         type: 'Studio',
         summary: "Fantastic duplex apartment with three bedrooms, located in the historic area of Porto, Ribeira (Cube)...",
         capacity: 7,
+        houseRules: {
+            isPets: false,
+            isSmoking: false
+        },
         amenities: [
             "TV",
         ],
@@ -164,6 +183,7 @@ const gStays = [
         },
         loc: {
             country: "Portugal",
+            city: "Carish Bamia",
             countryCode: "PT",
             address: "Porto, Portugal",
             lat: -8.61309,
@@ -198,6 +218,7 @@ const gStays = [
         },
         loc: {
             country: "UK",
+            city: "London",
             countryCode: "UK",
             address: "London, UK",
             lat: 8.61308,
@@ -235,6 +256,10 @@ const gStays = [
                 }
             }
         ],
+        houseRules: {
+            isPets: true,
+            isSmoking: true
+        },
         likedByUserIds: [
             "u101",
             "u102",
@@ -269,6 +294,7 @@ const gStays = [
         },
         loc: {
             country: "UK",
+            city: "Manchester",
             countryCode: "UK",
             address: "London, UK",
             lat: 8.61308,
@@ -306,6 +332,10 @@ const gStays = [
                 }
             }
         ],
+        houseRules: {
+            isPets: true,
+            isSmoking: true
+        },
         likedByUserIds: [
             "u101",
             "u102",
@@ -340,6 +370,7 @@ const gStays = [
         },
         loc: {
             country: "UK",
+            city: "Bermingham",
             countryCode: "UK",
             address: "London, UK",
             lat: 8.61308,
@@ -377,6 +408,10 @@ const gStays = [
                 }
             }
         ],
+        houseRules: {
+            isPets: true,
+            isSmoking: true
+        },
         likedByUserIds: [
             "u101",
             "u102",
@@ -411,6 +446,7 @@ const gStays = [
         },
         loc: {
             country: "UK",
+            city: "Liverpool",
             countryCode: "UK",
             address: "London, UK",
             lat: 8.61308,
@@ -448,6 +484,10 @@ const gStays = [
                 }
             }
         ],
+        houseRules: {
+            isPets: false,
+            isSmoking: true
+        },
         likedByUserIds: [
             "u101",
             "u102",
