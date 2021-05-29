@@ -1,4 +1,7 @@
 .stay-rate {
-    // justify-content:flex-start;
-    align-items: center;
+    align-items: flex-start;
+    svg {
+        color: $clr5;
+        padding-right: rem(3px);
+    }
 }
