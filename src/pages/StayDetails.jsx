@@ -60,13 +60,13 @@ export class StayDetails extends Component {
                     </div>
                 </div>
 
-                {/* {imgUrls && <div className="details-gallery-container">{
+                {imgUrls && <div className="details-gallery-container">{
                     imgUrls.map((imgUrl, idx) => {
                         return <div key={idx} className={`details-img-container img-${idx + 1}`}>
                             <img src={imgUrl} />
                         </div>
                     })
-                }</div>} */}
+                }</div>}
 
                 <section className="host-main-container justify-space-between flex">
                     <div className="flex full column">
