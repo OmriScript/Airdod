@@ -18,6 +18,7 @@ export class StayBookModal extends Component {
         console.log('handleSubmit')
         window.location.hash = '/'
     }
+
     render() {
         const { stay } = this.props
         if (!stay) return <p>Loading</p>
