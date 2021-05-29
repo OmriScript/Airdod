@@ -50,8 +50,8 @@ export class StayDetails extends Component {
                                 isShowReviews={true}
                             />
                             <span className="details-header-dot">·</span>
-                            {loc && <span className="details-header-tags">
-                                {loc.address}</span>}
+                            {loc && <a className="details-header-tags">
+                                {loc.address}</a>}
                         </div>
                         <button className="details-header-save flex align-center">
                             <FontAwesomeIcon icon={faHeart} />
