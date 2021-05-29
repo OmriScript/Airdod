@@ -3,7 +3,7 @@ import { Search } from './Search.jsx'
 
 export function AppHeader() {
     return (
-        <header>
+        <header className="full">
             <nav className="app-header flex justify-space-between">
                 <NavLink to="/"><h1 className="logo">Logo</h1></NavLink>
                 <Search />

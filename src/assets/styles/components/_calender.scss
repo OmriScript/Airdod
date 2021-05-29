@@ -8,6 +8,10 @@
     }
     .DateInput_input__small {
         padding: 0;
+        &.DateInput_input__small_2{
+            font-size: 13px;
+        }
+        
     }
     > div {
         background: transparent;
@@ -16,3 +20,7 @@
         visibility: hidden;
     }
 }
+
+// .DateInput_input.DateInput_input_1.DateInput_input__small{
+// font-size: 15px ;
+// }

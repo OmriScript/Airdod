@@ -15,6 +15,7 @@ class _Search extends Component {
     state = {
         startDate: '',
         endDate: '',
+        isShown: false,
         filterBy: {
             country: '',
             guest: 0
@@ -24,19 +25,13 @@ class _Search extends Component {
     handleChange = ({ target }) => {
         const { name, value } = target
         const { filterBy } = this.state
-        this.setState({ filterBy: { ...filterBy, [name]: value } }, () => {
-            this.setFilter(this.state.filterBy)
-        })
-    }
-
-    setFilter = (fi) => {
-        // console.log('SET', filterBy)
+        this.setState({ filterBy: { ...filterBy, [name]: value } })
     }
 
     onSubmitStay = ev => {
         ev.preventDefault()
         const { country, guest } = this.state.filterBy
-        const {startDate, endDate} = this.state
+        const { startDate, endDate } = this.state
         const filterBy = {
             startDate: startDate?._d || '',
             endDate: endDate?._d || '',
@@ -45,15 +40,20 @@ class _Search extends Component {
         }
         this.props.getStays(filterBy)
     }
+    onToggleSearchBar = () => {
+        this.setState({ isShown: !this.state.isShown })
+    }
+
 
     render() {
         return (
-            <section className="stay-search flex">
-                <form
+            <section className={`stay-search flex align-center`}>
+                <div className="search-bar" onClick={this.onToggleSearchBar}>222</div>
+                {this.state.isShown && <form
                     className="flex"
                     onSubmit={this.onSubmitStay}
                 >
-                    <div className="search-input flex column justify-center">
+                    <div className="search-input country-input flex column justify-center">
                         <div className="location-label">
                             <label htmlFor="location">location</label>
                         </div>
@@ -67,7 +67,7 @@ class _Search extends Component {
                                 placeholder="where do you want to go?" />
                         </div>
                     </div>
-                    <div className="search-input flex column justify-center">
+                    <div className="search-input date-input flex column justify-center">
                         <div className="dates-label">
                             <label>dates</label>
                         </div>
@@ -86,7 +86,7 @@ class _Search extends Component {
                             small
                         />
                     </div>
-                    <div className="search-input flex column justify-center">
+                    <div className="search-input guest-input flex column justify-center">
                         <div className="guests-label">
                             <label htmlFor="guest">guests</label>
                         </div>
@@ -103,7 +103,7 @@ class _Search extends Component {
                     <button className="primary-btn btn-grd">
                         <SearchIcon />
                     </button>
-                </form>
+                </form>}
             </section>
         )
     }

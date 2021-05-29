@@ -1,0 +1,13 @@
+.stay-home {
+    height: 100vh;
+    .home-hero{
+        background: url("https://res.cloudinary.com/duhcvi6p4/image/upload/v1622288003/real-estate-4955087_1920_hdmmma.jpg")
+        no-repeat;
+        background-position: center center;
+        background-size: cover;
+        height: 100%;
+    }
+    .explore-locations{
+        display: grid;
+    }
+}

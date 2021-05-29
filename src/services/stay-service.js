@@ -119,6 +119,28 @@ const gStays = [
             lat: -8.61307,
             lng: 41.1412
         },
+        reviews: [
+            {
+                id: "madeId101",
+                txt: "Very helpful hosts. Cooked traditional...",
+                rate: 4,
+                by: {
+                    _id: "u101",
+                    fullname: "user1",
+                    imgUrl: "/img/img1.jpg"
+                }
+            },
+            {
+                id: "madeId102",
+                txt: "Very clear",
+                rate: 3,
+                by: {
+                    _id: "u102",
+                    fullname: "user2",
+                    imgUrl: "/img/img2.jpg"
+                }
+            },
+        ],
     },
     {
         _id: "10006548",
@@ -189,6 +211,18 @@ const gStays = [
             lat: -8.61309,
             lng: 40.1413
         },
+        reviews: [
+            {
+                id: "madeId103",
+                txt: "Very clear",
+                rate: 4,
+                by: {
+                    _id: "u103",
+                    fullname: "user3",
+                    imgUrl: "/img/img3.jpg"
+                }
+            }
+        ]
     },
     {
         _id: "10006556",
@@ -330,6 +364,16 @@ const gStays = [
                     fullname: "user3",
                     imgUrl: "/img/img3.jpg"
                 }
+            },
+            {
+                id: "madeId104",
+                txt: "Very clear",
+                rate: 5,
+                by: {
+                    _id: "u104",
+                    fullname: "user4",
+                    imgUrl: "/img/img4.jpg"
+                }
             }
         ],
         houseRules: {
@@ -343,24 +387,23 @@ const gStays = [
         ]
     },
     {
-        _id: "10006557",
-        name: "Cosy London",
+        _id: "10004545",
+        name: "Apartment in London",
         imgUrls: [
-            "https://res.cloudinary.com/ariecloud/image/upload/v1606476017/users/manhaten1_yaiizk.jpg",
-            "https://res.cloudinary.com/ariecloud/image/upload/v1606476017/users/manhaten2_qx3pag.jpg",
-            "https://res.cloudinary.com/ariecloud/image/upload/v1606476017/users/manhaten3_kzfcdd.jpg",
-            "https://res.cloudinary.com/ariecloud/image/upload/v1606477432/users/manhaten4_i5xjn3.jpg",
-            "https://res.cloudinary.com/ariecloud/image/upload/v1606476017/users/manhaten5_dtpzhl.jpg"
+            "https://res.cloudinary.com/ariecloud/image/upload/v1606635076/houses/tokyo1_z0qs7g.jpg",
+            "https://res.cloudinary.com/ariecloud/image/upload/v1606635076/houses/tokyo3_yzlnmk.jpg",
+            "https://res.cloudinary.com/ariecloud/image/upload/v1606635076/houses/tokyo4_xvihea.jpg",
+            "https://res.cloudinary.com/ariecloud/image/upload/v1606635076/houses/tokyo2_ohfxlg.jpg",
+            "https://res.cloudinary.com/ariecloud/image/upload/v1606635076/houses/tokyo5_an6j0x.jpg"
         ],
         price: 230.00,
         type: 'Shared apartment',
-        summary: "The apartment has been recently refurbished in a modern style, featuring a fully equipped kitchen. It features comfortable furniture throughout the apartment.",
-        capacity: 6,
+        summary: "Comfortable furniture throughout the apartment.",
+        capacity: 2,
         amenities: [
             "TV",
             "Wifi",
             "Kitchen",
-            "Smoking allowed",
             "Cooking basics"
         ],
         host: {
@@ -406,6 +449,16 @@ const gStays = [
                     fullname: "user3",
                     imgUrl: "/img/img3.jpg"
                 }
+            },
+            {
+                id: "madeId104",
+                txt: "Very clear",
+                rate: 5,
+                by: {
+                    _id: "u104",
+                    fullname: "user4",
+                    imgUrl: "/img/img4.jpg"
+                }
             }
         ],
         houseRules: {
@@ -414,12 +467,11 @@ const gStays = [
         },
         likedByUserIds: [
             "u101",
-            "u102",
             "u103"
         ]
     },
     {
-        _id: "10006558",
+        _id: "10006559",
         name: "A Studio in London",
         imgUrls: [
             "https://res.cloudinary.com/ariecloud/image/upload/v1606635732/users/new-newyork1_h8khpy.jpg",
@@ -473,16 +525,6 @@ const gStays = [
                     imgUrl: "/img/img2.jpg"
                 }
             },
-            {
-                id: "madeId103",
-                txt: "Very clear",
-                rate: 4,
-                by: {
-                    _id: "u103",
-                    fullname: "user3",
-                    imgUrl: "/img/img3.jpg"
-                }
-            }
         ],
         houseRules: {
             isPets: false,

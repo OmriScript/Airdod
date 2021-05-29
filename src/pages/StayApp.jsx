@@ -6,8 +6,10 @@ import { getStays } from '../store/actions/stay.actions.js'
 
 export class _StayApp extends Component {
     render() {
-        const stays = this.props.stays
-        
+        const { stays } = this.props
+        if (!stays) return <h1>reloading</h1>
+
+
         return (
             <section className="stay-app">
                 <StayFilter />
