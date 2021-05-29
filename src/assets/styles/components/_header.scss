@@ -1,5 +1,11 @@
  header {
     padding: 1rem;
+    position: fixed;
+    background-color: $clr1;
+    z-index: 100;
+    top: 0;
+    right: 0;
+    left: 0;
  }
  
  .app-header {

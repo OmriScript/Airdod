@@ -10,11 +10,12 @@
     
     form {
         position: absolute;
-        right: 15%;
+        right: 24%;
         top: 90%;
         border: 1px solid gray;
         cursor: pointer;
         border-radius: 2rem;
+        background-color: $clr1;
         label {
             color: $clr3;
         }
