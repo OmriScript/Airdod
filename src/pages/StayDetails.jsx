@@ -1,10 +1,12 @@
 import { Component } from 'react'
 import { stayService } from '../services/stay-service'
 import { AssetDetails } from '../cmps/AssetDetails.jsx'
+import { StayRate } from '../cmps/StayRate.jsx'
 import { AvatarSymbol } from '../cmps/AvatarSymbol.jsx'
+import { StayBookModal } from '../cmps/StayBookModal.jsx'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faStar, faHeart } from '@fortawesome/free-solid-svg-icons'
+import { faHeart } from '@fortawesome/free-solid-svg-icons'
 
 export class StayDetails extends Component {
 
@@ -19,69 +21,75 @@ export class StayDetails extends Component {
     async setStayDetails() {
         const { id } = this.props.match.params
         let stay = await stayService.getById(id)
-        if (stay.reviews) stay.reviewsAvg = this.calcReviewsAvg(stay)
         this.setState({ stay })
     }
 
-    calcReviewsAvg = (stay) => {
-        
-        let reviews = stay.reviews
-        let total = 0;
-        for (let i = 0; i < reviews.length; i++) {
-            total += reviews[i].rate;
-        }
-        return (total / reviews.length).toFixed(2);
-    }
-
     render() {
-        const img1 = 'https://res.cloudinary.com/ariecloud/image/upload/v1606584668/users/londoning2_fzcrtp.jpg'
-        // const img2 = 'https://res.cloudinary.com/ariecloud/image/upload/v1606584668/users/londoning3_p8fxak.jpg'
-        // const img3 = 'https://res.cloudinary.com/ariecloud/image/upload/v1606584668/users/londoning4_fktfrf.jpg'
-        // const img4 = 'https://res.cloudinary.com/ariecloud/image/upload/v1606584668/users/londoning1_fj7sai.jpg'
-        // const img5 = 'https://res.cloudinary.com/ariecloud/image/upload/v1606584668/users/londoning5_sgfmv5.jpg'
-        if (!this.state.stay) return <h1>reloading</h1>
 
+        const { stay } = this.state
         const {
-            reviewsAvg,
-            reviews,
             loc,
             name,
             type,
             host,
+            imgUrls,
             capacity,
             houseRules
-        } = this.state.stay
+        } = stay
+
+        if (!stay) return <h1>reloading</h1>
 
         return (
             <section className="stay-details-container">
                 <div className="details-header-container">
                     <h1>{name}</h1>
-                    <div>
-                        <FontAwesomeIcon icon={faStar} />
-                        {reviewsAvg ? <span className="details-header-rate">
-                            {reviewsAvg}</span> : <span>Be the first reviewer</span>}
-                        {reviews && <span className="details-header-reviwes">
-                            ({reviews.length})Reviews
-                            </span>}
-                        <span className="details-header-dot">·</span>
-                        {loc && <span className="details-header-tags">
-                            {loc.address}</span>}
-                        <button className="details-header-save">
+                    <div className="details-header-details flex justify-space-between">
+                        <div className="details-header-desc flex">
+                            <StayRate
+                                stay={stay}
+                                isShowReviews={true}
+                            />
+                            <span className="details-header-dot">·</span>
+                            {loc && <span className="details-header-tags">
+                                {loc.address}</span>}
+                        </div>
+                        <button className="details-header-save flex align-center">
                             <FontAwesomeIcon icon={faHeart} />
-                            Save</button>
+                            Save
+                        </button>
                     </div>
                 </div>
-                {/* <div className="details-gallery-container"></div> */}
 
-                {host && <div className="host-header-container">
-                    <h2>{type} hosted by {host.fullname}</h2>
-                    <span className="host-header-capacity">Up to {capacity} guests</span>
-                    <AvatarSymbol />
-                </div>}
+                {imgUrls && <div className="details-gallery-container">{
+                    imgUrls.map((imgUrl, idx) => {
+                        return <div key={idx} className={`details-img-container img-${idx + 1}`}>
+                            <img src={imgUrl} />
+                        </div>
+                    })
+                }</div>}
 
-                {houseRules && <AssetDetails
-                    type={type}
-                    houseRules={houseRules} />}
+                <section className="host-main-container justify-space-between flex">
+                    <div className="flex full column">
+                        {host && <div className="host-header-container flex">
+                            <div className="flex column full">
+                                <h2>{type} hosted by {host.fullname}</h2>
+                                <span className="host-header-capacity">Up to {capacity} guests</span>
+                            </div>
+                            <div>
+                                <AvatarSymbol />
+                            </div>
+                        </div>}
+                        <div className="asset-details-container">
+                            {houseRules && <AssetDetails
+                                type={type}
+                                houseRules={houseRules}
+                            />}
+                        </div>
+                    </div>
+                    <div className="staybook-modal-container ">
+                        <StayBookModal stay={stay} />
+                    </div>
+                </section>
             </section>
         )
     }
