@@ -1,32 +1,40 @@
 .stay-search {
     background-color: $clr1;
+    flex-direction: column;
     border-radius: 2rem;
-    width: rem(750px);
-    position: absolute;
-    top: rem(150px);
+    cursor: pointer;
+    .search-bar {
+        border-radius: 2rem;
+        border: 1px solid gray;
+    }
     
     form {
-        width: 100%;
+        position: absolute;
+        right: 15%;
+        top: 90%;
+        border: 1px solid gray;
+        cursor: pointer;
         border-radius: 2rem;
+        label {
+            color: $clr3;
+        }
         input,
         label {
-            // padding: .6rem 0;
+            cursor: pointer;
             border: none;
             outline: none;
             background-color: inherit;
-            cursor: pointer;
             border-radius: 2rem;
         }
         button {
             border-radius: 50%;
-            // margin: .2rem 0;
-            // max-height: rem(40px);
-            height: 48px;
+            height: 40px;
+            margin: .2rem;
         }
         .search-input {
             border-radius: 2rem;
             transition: ease-in-out .3s;
-            padding-inline-start: 2rem;
+            padding:.1rem 0 .1rem 2rem;
             &:hover {
                 background-color: darken($clr1, 10%);
             }
