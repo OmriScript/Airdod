@@ -1,15 +1,11 @@
-export function CityCard({title, imgUrl}) {
+export function CityCard({ title, imgUrl }) {
     return (
-        <div>
-            <div className="explore-locations">
-                <div className="locaition-card">
-                    <div className="img-container">
-                        <img src={imgUrl} alt={title} />
-                    </div>
-                    <div className="content-container">
-                        <h3>{title}</h3>
-                    </div>
-                </div>
+        <div className={` ${title}-card card`}>
+            <div className="img-container">
+                <img src={`https://res.cloudinary.com/duhcvi6p4/image/upload/v1622304703/${imgUrl}.jpg`} alt="" />
+            </div>
+            <div className={`bg-filter ${title}`}>
+                <h3>{title}</h3>
             </div>
         </div>
     )

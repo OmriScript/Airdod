@@ -1,0 +1,27 @@
+.city-card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: rem(18px);
+    font-family: "Roboto-medium";
+    text-transform: capitalize;
+    font-size: rem(26px);
+    color: $clr1;
+    margin-block-end: rem(100px);
+    
+    .card {
+        position: relative;
+        .img-container {
+            height: 100%;
+            img {
+                border-radius: 0.5rem;
+            }
+        }
+    }
+
+    .bg-filter {
+        margin-inline-start: 0.3rem;
+        position: absolute;
+        bottom: 0px;
+    }
+}
