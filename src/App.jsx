@@ -14,24 +14,15 @@ export class _App extends Component {
   }
 
   render() {
-    const staysToShow = this.props.staysToShow
-    console.log('staysToShow', staysToShow)
-    if (!staysToShow) return <h1>'Loading...'</h1>
     return (
       <div className="app main-container" >
         <AppHeader />
         <Switch>
           {routes.map(route => <Route key={route.path} exact component={route.component} path={route.path} />)}
         </Switch>
-        {/* <Footer /> */}
+        <Footer />
       </div>
     )
-  }
-}
-
-function mapStateToProps(state) {
-  return {
-    staysToShow: state.stayModule.stays
   }
 }
 
@@ -39,4 +30,4 @@ const mapDispatchToProps = {
   getStays
 }
 
-export const App = connect(mapStateToProps, mapDispatchToProps)(_App)
+export const App = connect(null, mapDispatchToProps)(_App)

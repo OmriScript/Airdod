@@ -1,9 +1,11 @@
 import { Link } from 'react-router-dom'
-import StarRate from '@material-ui/icons/StarRate'
 import { ImageCarousel } from './ImageCarousel'
 import { ImageCarosuelM } from './ImageCarouselM'
+import { StayRate } from './StayRate.jsx'
+import { LongTxt } from './LongTxt.jsx';
 
 export function StayPreview({ stay }) {
+    // console.log('stay', stay);
     return (
         <section className="stay-preview">
             <Link to={`stay/${stay._id}`}>
@@ -11,16 +13,19 @@ export function StayPreview({ stay }) {
                     <ImageCarousel imgsSrc={stay.imgUrls} />
                     {/* <ImageCarosuelM imgsSrc={stay.imgUrls} /> */}
                 </div>
+                <p>{stay.type} in {stay.loc.country}</p>
                 <div className="description">
-                    <p className='flex'>
-                        <StarRate style={{ color: 'rgba(111, 52, 250, 1)' }} />
-                        rate (num of review)
-                    </p>
-
-
-                    <h3>{stay.name}</h3>
-                    <p>${stay.price} / night</p>
-                    <h3>{stay.summary}</h3>
+                    {/* <h3>{stay.name}</h3> */}
+                    <LongTxt txt={stay.summary} numOfChars={30} />
+                    <ul className="clean-list flex">
+                        {stay.amenities.map((amenity, idx) => {
+                            return <li key={idx}>*{amenity}</li>
+                        })}
+                    </ul>
+                    <div className="flex">
+                        <StayRate stay={stay} isShowReviews={true} />
+                        <p>${stay.price} / night</p>
+                    </div>
                 </div>
             </Link>
         </section>
