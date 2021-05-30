@@ -1,14 +1,29 @@
- header {
+header {
     padding: 1rem;
     position: fixed;
-    background-color: $clr1;
+    background-color: transparent;
     z-index: 100;
     top: 0;
     right: 0;
     left: 0;
- }
- 
- .app-header {
-     position: relative;
-     
- }
+    a {
+        color: $clr1;
+        &:visited {
+            color: $clr1;
+        }
+    }
+    &.white {
+        background-color: $clr1;
+        transition: ease-in-out 0.2s;
+        a {
+            color: $clr3;
+        }
+    }
+}
+
+.app-header {
+    position: relative;
+    max-width: 1024px;
+    justify-content: space-between;
+    width: 100%;
+}

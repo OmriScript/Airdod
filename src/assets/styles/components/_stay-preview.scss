@@ -6,6 +6,15 @@
     //     width: 200px;
     //     height: 200px;
     // }
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: flex-start;
+    // align-items: center;
+    a > * {
+        margin-bottom: 5px;
+     }
+    
+
     .stay-image-container {
         margin-bottom: 25px;
         img {
@@ -14,20 +23,28 @@
         }
     }
 
-    .description div {
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
+    .price {
+        font-weight: bold;
     }
 
-    .description ul {
-        // font-size: rem(16px);
-        flex-wrap: wrap;
+    // .description > * {
+    //     margin-bottom: 8px;
+    // }
+
+    // .description div {
+    //     justify-content: space-between;
+    //     align-items: center;
+    //     flex-wrap: wrap;
+    // }
+
+    // .description ul {
+    //     // font-size: rem(16px);
+    //     flex-wrap: wrap;
         
-            li {
-                margin-right: 15px;
-            }
+    //         li {
+    //             margin-right: 15px;
+    //         }
         
-    }
+    // }
 
 }

@@ -1,9 +1,11 @@
 .stay-filter-2 {
+    font-family: 'Roboto-Medium';
     .filter-header {
         font-size: rem(32px);
         height: rem(36px);
         margin-bottom: 30px;
         margin-top: 100px;
+        color: $clr3
     }
     .btn-group {
         margin-bottom: 30px;
@@ -13,13 +15,11 @@
         margin: 4px 8px 4px 0px;
         border: 1px solid $clr6;
         border-radius: 30px;
-        // font-family: 'Roboto-Regular';
-    
+        
+
         &:hover {
-            // font-family: 'Roboto-Medium';
         border-color: $clr2;
         }
     }
    }
 }
-
