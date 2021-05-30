@@ -19,7 +19,7 @@ export class _App extends Component {
     window.onscroll = () => {
       if (window.pageYOffset >= 150) {
         this.setState({ hideSearch: 'hiden', hideTopSearch: '', bgc: 'white' })
-        
+
       } else {
         this.setState({ hideSearch: '', hideTopSearch: 'hiden', bgc: '' })
       }
@@ -27,18 +27,18 @@ export class _App extends Component {
   }
 
   onToggleSearchBar = () => {
-    this.setState({ hideSearch: this.state.hideSearch === ''?'hiden':'' })
-}
+    this.setState({ hideSearch: this.state.hideSearch === '' ? 'hiden' : '' })
+  }
 
   componentWillUnmount() {
     window.onscroll = null;
   }
 
   render() {
-    const {hideSearch, hideTopSearch, bgc} = this.state
+    const { hideSearch, hideTopSearch, bgc } = this.state
     return (
       <div className="app main-container" >
-        <AppHeader bgc={bgc} hideTopSearch={hideTopSearch} onToggleSearchBar={this.onToggleSearchBar} hideSearch={hideSearch}/>
+        <AppHeader bgc={bgc} hideTopSearch={hideTopSearch} onToggleSearchBar={this.onToggleSearchBar} hideSearch={hideSearch} />
         <Switch>
           {routes.map(route => <Route key={route.path} exact component={route.component} path={route.path} />)}
         </Switch>

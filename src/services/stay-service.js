@@ -24,16 +24,16 @@ const gStays = [
         summary: "Practical and conveniently located 1 bedroom flat with all amenities for a comfortable stay. Centrally located to enjoy all the city has to offer! In this apartment can sleep up to 4 people comfortably",
         capacity: 4,
         amenities: {
-            'TV': true,
-            'Wi-Fi': true,
-            'Kitchen': false,
-            'Accessibility': true,
-            'Air Conditioner': true,
-            'Secured': true,
-            "Fast food": false,
-            "Parking": true,
-            "Aid kit": true,
-            "Public Transport": true
+            'tv': true,
+            'wifi': true,
+            'kitchen': false,
+            'accessibility': true,
+            'airConditioner': true,
+            'secured': true,
+            "fastFood": false,
+            "parking": true,
+            "aidKit": true,
+            "publicTransport": true
         },
         host: {
             _id: "51399391",
@@ -108,16 +108,16 @@ const gStays = [
             isSmoking: false
         },
         amenities: {
-            'TV': true,
-            'Wi-Fi': true,
-            'Kitchen': false,
-            'Accessibility': false,
-            'Air Conditioner': true,
-            'Secured': true,
-            "Fast food": false,
-            "Parking": true,
-            "Aid kit": true,
-            "Public Transport": true
+            'tv': true,
+            'wifi': true,
+            'kitchen': false,
+            'accessibility': false,
+            'airConditioner': true,
+            'secured': true,
+            "fastFood": false,
+            "parking": true,
+            "aidKit": true,
+            "publicTransport": true
         },
         host: {
             _id: "51399391",
@@ -174,16 +174,16 @@ const gStays = [
             isSmoking: true
         },
         amenities: {
-            'TV': true,
-            'Wi-Fi': true,
-            'Kitchen': false,
-            'Accessibility': true,
-            'Air Conditioner': true,
-            'Secured': true,
-            "Fast food": false,
-            "Parking": false,
-            "Aid kit": false,
-            "Public Transport": true
+            'tv': true,
+            'wifi': true,
+            'kitchen': false,
+            'accessibility': true,
+            'airConditioner': true,
+            'secured': true,
+            "fastFood": false,
+            "parking": false,
+            "aidKit": false,
+            "publicTransport": true
         },
         host: {
             _id: "51399391",
@@ -218,16 +218,16 @@ const gStays = [
             isSmoking: false
         },
         amenities: {
-            'TV': false,
-            'Wi-Fi': true,
-            'Kitchen': true,
-            'Accessibility': true,
-            'Air Conditioner': true,
-            'Secured': false,
-            "Fast food": false,
-            "Parking": true,
-            "Aid kit": true,
-            "Public Transport": true
+            'tv': false,
+            'wifi': true,
+            'kitchen': true,
+            'accessibility': true,
+            'airConditioner': true,
+            'secured': false,
+            "fastFood": false,
+            "parking": true,
+            "aidKit": true,
+            "publicTransport": true
         },
         host: {
             _id: "51399391",
@@ -270,16 +270,16 @@ const gStays = [
         summary: "A spacious private bedroom with a shared fully fitted kitchen, wood flooring, double glazing. Situated in the ever popular Drummond Street & within walking distance to transport links of Euston & Warren St, all amenities of Tottenham Court Road & University College of London (UCL ). Euston is both a train station and a Tube station and just 4 minutes away from our apartment. Euston Square Underground Station is just 2 mins away. London Euston is directly connected to several major UK cities.",
         capacity: 4,
         amenities: {
-            'TV': false,
-            'Wi-Fi': false,
-            'Kitchen': false,
-            'Accessibility': true,
-            'Air Conditioner': true,
-            'Secured': true,
-            "Fast food": false,
-            "Parking": true,
-            "Aid kit": true,
-            "Public Transport": true
+            'tv': false,
+            'wifi': false,
+            'kitchen': false,
+            'accessibility': true,
+            'airConditioner': true,
+            'secured': true,
+            "fastFood": false,
+            "parking": true,
+            "aidKit": true,
+            "publicTransport": true
         },
         host: {
             _id: "51399391",
@@ -351,16 +351,16 @@ const gStays = [
         summary: "Lovely, modern, bright stufio flat in trendy Battersea/Clapham Five-minute walk from Wansworth tube and approximately 15 minute walk to Clapham. Bus stop just outside the flat so would be super easy to commute and visit central London. Only 20 minutes commuting to Oxford Circus. A short stroll to Upper Street. Great central-London location",
         capacity: 4,
         amenities: {
-            'TV': true,
-            'Wi-Fi': true,
-            'Kitchen': true,
-            'Accessibility': false,
-            'Air Conditioner': true,
-            'Secured': true,
-            "Fast food": true,
-            "Parking": true,
-            "Aid kit": false,
-            "Public Transport": true
+            'tv': true,
+            'wifi': true,
+            'kitchen': true,
+            'accessibility': false,
+            'airConditioner': true,
+            'secured': true,
+            "fastFood": true,
+            "parking": true,
+            "aidKit": false,
+            "publicTransport": true
         },
         host: {
             _id: "51399391",
@@ -442,16 +442,16 @@ const gStays = [
         summary: "COVID-19 - Update: I have employed a cleaning company to disinfect the room and communal areas every day. The company uses a cleaning solution that kills 99.999% of harmful bacteria, germs and viruses. High end, newly refurbished, 5 Star double room with shared bathroom. Spacious and well designed living and sleeping space complimented by our fully equipped modern kitchen. Décor is exceptional throughout. 10 minutes walk to Swiss Cottage tube station. Swiss Cottage to Bond Street is only 9 minuets, Ideal for exploring all that Central London has to offer. Please note although this property is not currently well reviewed yet, I am a Superhost with over 500 reviews. You are in very safe hands.",
         capacity: 2,
         amenities: {
-            'TV': true,
-            'Wi-Fi': true,
-            'Kitchen': true,
-            'Accessibility': true,
-            'Air Conditioner': false,
-            'Secured': true,
-            "Fast food": true,
-            "Parking": true,
-            "Aid kit": false,
-            "Public Transport": true
+            'tv': true,
+            'wifi': true,
+            'kitchen': true,
+            'accessibility': true,
+            'airConditioner': false,
+            'secured': true,
+            "fastFood": true,
+            "parking": true,
+            "aidKit": false,
+            "publicTransport": true
         },
         host: {
             _id: "51399391",
@@ -532,16 +532,16 @@ const gStays = [
         summary: "To ensure the safety of all guests and our staff we request you practice social distancing during your stay. Our already rigorous health and safety measures now include: contactless check-in/check-out, a high-touch deep clean approach, no-contact cleans upon request, food delivery and a 24 hour window between guests in apartments. All our apartments are self-contained and fully equipped for in-room cooking. All restaurants and social spaces remain closed until further notice.",
         capacity: 2,
         amenities: {
-            'TV': true,
-            'Wi-Fi': true,
-            'Kitchen': true,
-            'Accessibility': false,
-            'Air Conditioner': true,
-            'Secured': false,
-            "Fast food": true,
-            "Parking": true,
-            "Aid kit": false,
-            "Public Transport": false
+            'tv': true,
+            'wifi': true,
+            'kitchen': true,
+            'accessibility': false,
+            'airConditioner': true,
+            'secured': false,
+            "fastFood": true,
+            "parking": true,
+            "aidKit": false,
+            "publicTransport": false
         },
         host: {
             _id: "51399391",
