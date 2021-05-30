@@ -92,7 +92,7 @@ export class StayDetails extends Component {
                             {/* <p></p> */}
                         </div>
                         {amenities && <div>
-                            <Amenities stay={stay}/>
+                            <Amenities amenities={amenities}/>
                         </div>}
                     </div>
                     <div className="staybook-modal-container ">
