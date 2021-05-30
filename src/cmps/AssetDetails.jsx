@@ -4,7 +4,7 @@ import { faHandSparkles, faHome, faBook } from '@fortawesome/free-solid-svg-icon
 export function AssetDetails({ type, houseRules }) {
 
     let assetTypeDesc
-    const { isSmoking, isPets } = houseRules
+    let houseRulesDesc
 
     switch (type) {
         case 'Entire home':
@@ -18,6 +18,14 @@ export function AssetDetails({ type, houseRules }) {
         case 'Shared apartment':
             assetTypeDesc = 'Sharing is caring, when individuals become a group.'
             break;
+    }
+
+    if (houseRules.isSmoking && houseRules.isPets) {
+        houseRulesDesc = 'Host Allow smoking and pets in the compound.'
+    } else if (houseRules.isSmoking && !houseRules.isPets) {
+        houseRulesDesc = 'Host Allow smoking but pets is not a good idea.'
+    } else {
+        houseRulesDesc = 'Host doesn’t allow pets or smoking around the compound.'
     }
 
     return (
@@ -40,9 +48,7 @@ export function AssetDetails({ type, houseRules }) {
                 <FontAwesomeIcon icon={faBook} size="2x" />
                 <div>
                     <h4>House rules</h4>
-                    <p> The host {isSmoking ? 'allow smoking' : 'doesn’t allow smoking'}
-                     and {isPets ? 'allow pets' : 'doesn’t allow smoking'}
-                    </p>
+                    <p>{houseRulesDesc}</p>
                 </div>
             </div>
         </div>
