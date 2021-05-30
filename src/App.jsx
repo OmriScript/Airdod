@@ -21,13 +21,11 @@ export class _App extends Component {
       if (window.location.hash === '#/') {
         if (window.pageYOffset >= 150) {
           this.setState({ hideSearch: 'hiden', hideTopSearch: '', bgc: 'white' })
-
         } else {
           this.setState({ hideSearch: '', hideTopSearch: 'hiden', bgc: '' })
         }
       }
     }
-
   }
 
   onToggleSearchBar = () => {

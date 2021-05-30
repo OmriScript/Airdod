@@ -4,7 +4,7 @@ import { faHandSparkles, faHome, faBook } from '@fortawesome/free-solid-svg-icon
 export function AssetDetails({ type, houseRules }) {
 
     let assetTypeDesc
-    const { isSmoking, isPets } = houseRules
+    let houseRulesDesc
 
     switch (type) {
         case 'Entire home':
@@ -20,24 +20,36 @@ export function AssetDetails({ type, houseRules }) {
             break;
     }
 
+    if (houseRules.isSmoking && houseRules.isPets) {
+        houseRulesDesc = 'Host Allow smoking and pets in the compound.'
+    } else if (houseRules.isSmoking && !houseRules.isPets) {
+        houseRulesDesc = 'Host Allow smoking but pets is not a good idea.'
+    } else {
+        houseRulesDesc = 'Host doesn’t allow pets or smoking around the compound.'
+    }
+
     return (
         <div className="about-asset-container">
-            <div className="about-asset-type">
+            <div className="about-asset-type flex">
                 <FontAwesomeIcon icon={faHome} size="2x" />
-                <h4>{type}</h4>
-                <p>{assetTypeDesc}</p>
+                <div>
+                    <h4>{type}</h4>
+                    <p>{assetTypeDesc}</p>
+                </div>
             </div>
-            <div className="about-asset-clean">
+            <div className="about-asset-clean flex">
                 <FontAwesomeIcon icon={faHandSparkles} size="2x" />
-                <h4>Enhanced Clean</h4>
-                <p>This host committed to Airdod's 5-step enhanced cleaning process.</p>
+                <div>
+                    <h4>Enhanced Clean</h4>
+                    <p>This host committed to Airdod's 5-step enhanced cleaning process.</p>
+                </div>
             </div>
-            <div className="about-asset-houserules">
+            <div className="about-asset-houserules flex">
                 <FontAwesomeIcon icon={faBook} size="2x" />
-                <h4>House rules</h4>
-                <p> The host {isSmoking ? 'allow smoking' : 'doesn’t allow smoking'}
-                 and {isPets ? 'allow pets' : 'doesn’t allow smoking'}
-                </p>
+                <div>
+                    <h4>House rules</h4>
+                    <p>{houseRulesDesc}</p>
+                </div>
             </div>
         </div>
     )

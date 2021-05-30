@@ -4,6 +4,7 @@ import { AssetDetails } from '../cmps/AssetDetails.jsx'
 import { StayRate } from '../cmps/StayRate.jsx'
 import { AvatarSymbol } from '../cmps/AvatarSymbol.jsx'
 import { StayBookModal } from '../cmps/StayBookModal.jsx'
+import { Amenities } from '../cmps/Amenities.jsx'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHeart } from '@fortawesome/free-solid-svg-icons'
@@ -16,6 +17,7 @@ export class StayDetails extends Component {
 
     componentDidMount() {
         this.setStayDetails()
+        window.scrollTo(0, 0)
     }
 
     async setStayDetails() {
@@ -34,7 +36,8 @@ export class StayDetails extends Component {
             host,
             imgUrls,
             capacity,
-            houseRules
+            houseRules,
+            amenities
         } = stay
 
         if (!stay) return <h1>reloading</h1>
@@ -50,8 +53,8 @@ export class StayDetails extends Component {
                                 isShowReviews={true}
                             />
                             <span className="details-header-dot">·</span>
-                            {loc && <span className="details-header-tags">
-                                {loc.address}</span>}
+                            {loc && <a className="details-header-tags">
+                                {loc.address}</a>}
                         </div>
                         <button className="details-header-save flex align-center">
                             <FontAwesomeIcon icon={faHeart} />
@@ -85,6 +88,12 @@ export class StayDetails extends Component {
                                 houseRules={houseRules}
                             />}
                         </div>
+                        <div className="about-asset-desc">
+                            {/* <p></p> */}
+                        </div>
+                        {amenities && <div>
+                            <Amenities stay={stay}/>
+                        </div>}
                     </div>
                     <div className="staybook-modal-container ">
                         <StayBookModal stay={stay} />

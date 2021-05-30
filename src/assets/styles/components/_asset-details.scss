@@ -1,0 +1,23 @@
+.about-asset-container {
+    & > *:not(:last-child) {
+        margin-bottom: rem(24px);
+    }
+
+    h4 {
+        color: $clr3;
+        font-family: Roboto-medium;
+        font-size: 1rem;
+        margin-bottom: rem(4px);
+    }
+
+    p {
+        font-size: rem(14px);
+        font-family: Roboto-light;
+    }
+
+    svg {
+        margin-right: rem(16px);
+        max-width: rem(26px);
+        max-height: rem(26px);
+    }
+}
