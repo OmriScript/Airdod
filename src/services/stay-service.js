@@ -23,18 +23,18 @@ const gStays = [
         type: 'Apartment',
         summary: "Practical and conveniently located 1 bedroom flat with all amenities for a comfortable stay. Centrally located to enjoy all the city has to offer! In this apartment can sleep up to 4 people comfortably",
         capacity: 4,
-        amenities: [
-            "TV",
-            "Wi-Fi",
-            "Kitchen",
-            "Accessibility",
-            "Air Conditioner",
-            "Secured",
-            "Fast food",
-            "Parking",
-            "Aid kit",
-            "Public Transport"
-        ],
+        amenities: {
+            'TV': true,
+            'Wi-Fi': true,
+            'Kitchen': false,
+            'Accessibility': true,
+            'Air Conditioner': true,
+            'Secured': true,
+            "Fast food": false,
+            "Parking": true,
+            "Aid kit": true,
+            "Public Transport": true
+        },
         host: {
             _id: "51399391",
             fullname: "GuestReady",
@@ -107,14 +107,18 @@ const gStays = [
             isPets: true,
             isSmoking: false
         },
-        amenities: [
-            "TV",
-            "Wi-Fi",
-            "Accessibility",
-            "Secured",
-            "Fast food",
-            "Public Transport"
-        ],
+        amenities: {
+            'TV': true,
+            'Wi-Fi': true,
+            'Kitchen': false,
+            'Accessibility': false,
+            'Air Conditioner': true,
+            'Secured': true,
+            "Fast food": false,
+            "Parking": true,
+            "Aid kit": true,
+            "Public Transport": true
+        },
         host: {
             _id: "51399391",
             fullname: "BnBird Homes",
@@ -169,14 +173,18 @@ const gStays = [
             isPets: false,
             isSmoking: true
         },
-        amenities: [
-            "TV",
-            "Wi-Fi",
-            "Air Conditioner",
-            "Fast food",
-            "Parking",
-            "Public Transport"
-        ],
+        amenities: {
+            'TV': true,
+            'Wi-Fi': true,
+            'Kitchen': false,
+            'Accessibility': true,
+            'Air Conditioner': true,
+            'Secured': true,
+            "Fast food": false,
+            "Parking": false,
+            "Aid kit": false,
+            "Public Transport": true
+        },
         host: {
             _id: "51399391",
             fullname: "Jacquelina Pim",
@@ -209,14 +217,18 @@ const gStays = [
             isPets: false,
             isSmoking: false
         },
-        amenities: [
-            "TV",
-            "Kitchen",
-            "Air Conditioner",
-            "Fast food",
-            "Parking",
-            "Public Transport"
-        ],
+        amenities: {
+            'TV': false,
+            'Wi-Fi': true,
+            'Kitchen': true,
+            'Accessibility': true,
+            'Air Conditioner': true,
+            'Secured': false,
+            "Fast food": false,
+            "Parking": true,
+            "Aid kit": true,
+            "Public Transport": true
+        },
         host: {
             _id: "51399391",
             fullname: "Marius",
@@ -245,7 +257,7 @@ const gStays = [
     },
     {
         _id: "10006556",
-        name: "Cosy Studio London",
+        name: "Master Quadruple Bedroom Euston London",
         imgUrls: [
             "https://res.cloudinary.com/ariecloud/image/upload/v1606635715/houses/tokyoTwo1_qzl2ft.jpg",
             "https://res.cloudinary.com/ariecloud/image/upload/v1606635715/houses/tokyoTwo4_iyh79l.jpg",
@@ -253,20 +265,22 @@ const gStays = [
             "https://res.cloudinary.com/ariecloud/image/upload/v1606635714/houses/tokyoTwo2_rrvxnm.jpg",
             "https://res.cloudinary.com/ariecloud/image/upload/v1606635715/houses/tokyoTwo3_q8wehk.jpg"
         ],
-        price: 210.00,
-        type: 'Studio',
-        summary: "This lovely two-bedroom apartment sleeping max 4 guests is located in the heart of Holland Park, just minutes away from multiple tube stations. The apartment has been recently refurbished in a modern style, featuring a fully equipped kitchen. It features comfortable furniture throughout the apartment.",
+        price: 85.00,
+        type: 'Apartment',
+        summary: "A spacious private bedroom with a shared fully fitted kitchen, wood flooring, double glazing. Situated in the ever popular Drummond Street & within walking distance to transport links of Euston & Warren St, all amenities of Tottenham Court Road & University College of London (UCL ). Euston is both a train station and a Tube station and just 4 minutes away from our apartment. Euston Square Underground Station is just 2 mins away. London Euston is directly connected to several major UK cities.",
         capacity: 4,
-        amenities: [
-            "TV",
-            "Wi-Fi",
-            "Kitchen",
-            "Air Conditioner",
-            "Secured",
-            "Parking",
-            "Aid kit",
-            "Public Transport"
-        ],
+        amenities: {
+            'TV': false,
+            'Wi-Fi': false,
+            'Kitchen': false,
+            'Accessibility': true,
+            'Air Conditioner': true,
+            'Secured': true,
+            "Fast food": false,
+            "Parking": true,
+            "Aid kit": true,
+            "Public Transport": true
+        },
         host: {
             _id: "51399391",
             fullname: "Davit Pok",
@@ -276,7 +290,7 @@ const gStays = [
             country: "UK",
             city: "London",
             countryCode: "UK",
-            address: "London, UK",
+            address: "Greater London, England, United Kingdom",
             lat: 8.61308,
             lng: -41.1413
         },
@@ -324,7 +338,7 @@ const gStays = [
     },
     {
         _id: "10006555",
-        name: "Cosy Studio London",
+        name: "New flat in Clapham, Central London, next station",
         imgUrls: [
             "https://res.cloudinary.com/ariecloud/image/upload/v1606635076/houses/tokyo1_z0qs7g.jpg",
             "https://res.cloudinary.com/ariecloud/image/upload/v1606635076/houses/tokyo2_ohfxlg.jpg",
@@ -332,19 +346,22 @@ const gStays = [
             "https://res.cloudinary.com/ariecloud/image/upload/v1606635076/houses/tokyo4_xvihea.jpg",
             "https://res.cloudinary.com/ariecloud/image/upload/v1606635076/houses/tokyo5_an6j0x.jpg"
         ],
-        price: 250.00,
+        price: 110.00,
         type: 'Shared apartment',
-        summary: "Comfortable furniture throughout the apartment.",
-        capacity: 5,
-        amenities: [
-            "Kitchen",
-            "Air Conditioner",
-            "Secured",
-            "Fast food",
-            "Parking",
-            "Aid kit",
-            "Public Transport"
-        ],
+        summary: "Lovely, modern, bright stufio flat in trendy Battersea/Clapham Five-minute walk from Wansworth tube and approximately 15 minute walk to Clapham. Bus stop just outside the flat so would be super easy to commute and visit central London. Only 20 minutes commuting to Oxford Circus. A short stroll to Upper Street. Great central-London location",
+        capacity: 4,
+        amenities: {
+            'TV': true,
+            'Wi-Fi': true,
+            'Kitchen': true,
+            'Accessibility': false,
+            'Air Conditioner': true,
+            'Secured': true,
+            "Fast food": true,
+            "Parking": true,
+            "Aid kit": false,
+            "Public Transport": true
+        },
         host: {
             _id: "51399391",
             fullname: "Davit Pok",
@@ -412,7 +429,7 @@ const gStays = [
     },
     {
         _id: "10004545",
-        name: "Apartment in London",
+        name: "Lovely Double Room in One of London’s Safest Areas",
         imgUrls: [
             "https://res.cloudinary.com/ariecloud/image/upload/v1606635076/houses/tokyo1_z0qs7g.jpg",
             "https://res.cloudinary.com/ariecloud/image/upload/v1606635076/houses/tokyo3_yzlnmk.jpg",
@@ -420,19 +437,22 @@ const gStays = [
             "https://res.cloudinary.com/ariecloud/image/upload/v1606635076/houses/tokyo2_ohfxlg.jpg",
             "https://res.cloudinary.com/ariecloud/image/upload/v1606635076/houses/tokyo5_an6j0x.jpg"
         ],
-        price: 230.00,
+        price: 158.00,
         type: 'Shared apartment',
-        summary: "Comfortable furniture throughout the apartment.",
+        summary: "COVID-19 - Update: I have employed a cleaning company to disinfect the room and communal areas every day. The company uses a cleaning solution that kills 99.999% of harmful bacteria, germs and viruses. High end, newly refurbished, 5 Star double room with shared bathroom. Spacious and well designed living and sleeping space complimented by our fully equipped modern kitchen. Décor is exceptional throughout. 10 minutes walk to Swiss Cottage tube station. Swiss Cottage to Bond Street is only 9 minuets, Ideal for exploring all that Central London has to offer. Please note although this property is not currently well reviewed yet, I am a Superhost with over 500 reviews. You are in very safe hands.",
         capacity: 2,
-        amenities: [
-            "TV",
-            "Wi-Fi",
-            "Kitchen",
-            "Air Conditioner",
-            "Secured",
-            "Fast food",
-            "Aid kit",
-        ],
+        amenities: {
+            'TV': true,
+            'Wi-Fi': true,
+            'Kitchen': true,
+            'Accessibility': true,
+            'Air Conditioner': false,
+            'Secured': true,
+            "Fast food": true,
+            "Parking": true,
+            "Aid kit": false,
+            "Public Transport": true
+        },
         host: {
             _id: "51399391",
             fullname: "Davit Pok",
@@ -499,7 +519,7 @@ const gStays = [
     },
     {
         _id: "10006559",
-        name: "A Studio in London",
+        name: "Locke at Broken Wharf City Studio",
         imgUrls: [
             "https://res.cloudinary.com/ariecloud/image/upload/v1606635732/users/new-newyork1_h8khpy.jpg",
             "https://res.cloudinary.com/ariecloud/image/upload/v1606635732/users/new-newyork2_oa49ku.jpg",
@@ -507,18 +527,22 @@ const gStays = [
             "https://res.cloudinary.com/ariecloud/image/upload/v1606635732/users/new-newyork4_zxtxbv.jpg",
             "https://res.cloudinary.com/ariecloud/image/upload/v1606635732/users/new-newyork5_j8c4xy.jpg"
         ],
-        price: 150.00,
+        price: 178.00,
         type: 'Apartment',
-        summary: "Just minutes away from multiple tube stations. The apartment has been recently refurbished in a modern style, featuring a fully equipped kitchen. It features comfortable furniture throughout the apartment.",
+        summary: "To ensure the safety of all guests and our staff we request you practice social distancing during your stay. Our already rigorous health and safety measures now include: contactless check-in/check-out, a high-touch deep clean approach, no-contact cleans upon request, food delivery and a 24 hour window between guests in apartments. All our apartments are self-contained and fully equipped for in-room cooking. All restaurants and social spaces remain closed until further notice.",
         capacity: 2,
-        amenities: [
-            "TV",
-            "Wi-Fi",
-            "Fast food",
-            "Parking",
-            "Aid kit",
-            "Public Transport"
-        ],
+        amenities: {
+            'TV': true,
+            'Wi-Fi': true,
+            'Kitchen': true,
+            'Accessibility': false,
+            'Air Conditioner': true,
+            'Secured': false,
+            "Fast food": true,
+            "Parking": true,
+            "Aid kit": false,
+            "Public Transport": false
+        },
         host: {
             _id: "51399391",
             fullname: "Davit Pok",
