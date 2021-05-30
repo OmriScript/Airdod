@@ -37,7 +37,8 @@ export class StayDetails extends Component {
             imgUrls,
             capacity,
             houseRules,
-            amenities
+            amenities,
+            summary
         } = stay
 
         if (!stay) return <h1>reloading</h1>
@@ -89,7 +90,7 @@ export class StayDetails extends Component {
                             />}
                         </div>
                         <div className="about-asset-desc">
-                            {/* <p></p> */}
+                            <p>{summary}</p>
                         </div>
                         {amenities && <div>
                             <Amenities amenities={amenities}/>

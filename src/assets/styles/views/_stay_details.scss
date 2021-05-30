@@ -73,6 +73,16 @@
         border-bottom: 1px solid $clr7;
     }
 
+    .about-asset-desc{
+        padding: rem(32px) 0 rem(48px);
+        border-bottom: 1px solid $clr7;
+        p {
+            color: $clr3;
+            font-family: Roboto-light;
+            line-height: rem(24px);
+        }
+    }
+
     .staybook-modal-container {
         min-width: rem(424px);
         & > * {
