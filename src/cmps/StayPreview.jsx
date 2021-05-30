@@ -13,20 +13,23 @@ export function StayPreview({ stay }) {
                     <ImageCarousel imgsSrc={stay.imgUrls} />
                     {/* <ImageCarosuelM imgsSrc={stay.imgUrls} /> */}
                 </div>
+                <StayRate stay={stay} />
                 <p>{stay.type} in {stay.loc.country}</p>
-                <div className="description">
-                    {/* <h3>{stay.name}</h3> */}
-                    <LongTxt txt={stay.summary} numOfChars={30} />
-                    <ul className="clean-list flex">
+                {/* <div className="description"> */}
+                {/* <h3>{stay.name}</h3> */}
+                <LongTxt txt={stay.summary} numOfChars={30} />
+                {/* <ul className="clean-list flex">
                         {stay.amenities.map((amenity, idx) => {
                             return <li key={idx}>*{amenity}</li>
                         })}
-                    </ul>
-                    <div className="flex">
+                    </ul> */}
+                {/* <div className="flex">
                         <StayRate stay={stay} isShowReviews={true} />
                         <p>${stay.price} / night</p>
-                    </div>
-                </div>
+                    </div> */}
+                <p><span className="price">${stay.price}</span> / night</p>
+
+                {/* </div> */}
             </Link>
         </section>
     )

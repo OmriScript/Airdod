@@ -5,6 +5,11 @@ import { StayFilter } from '../cmps/StayFilter.jsx'
 import { getStays } from '../store/actions/stay.actions.js'
 
 export class _StayApp extends Component {
+
+    componentDidMount() {
+        window.scrollTo(0, 0)
+    }
+
     render() {
         const { stays } = this.props
         if (!stays) return <h1>reloading</h1>

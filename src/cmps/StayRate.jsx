@@ -6,15 +6,25 @@ export function StayRate({ stay, isShowReviews }) {
     let avgRate = stay.reviews ? stay.reviews.reduce((sum, obj) => {
         return sum + obj.rate;
     }, 0) / stay.reviews.length : 0
-    
+
     if (avgRate % 1 !== 0) { // if decimal
-        avgRate = avgRate.toFixed(2)
+        if (avgRate.toString().split(".")[1].length > 1)
+            avgRate = avgRate.toFixed(2)
     }
+    const numOfReview = isShowReviews ? ' reviews' : ''
 
     return (
         <section className='stay-rate flex'>
             <FontAwesomeIcon icon={faStar} />
-            {avgRate} ({reviews}{isShowReviews ? ' reviews' : ''})
+            {/* {reviewsToShow} */}
+            {/* {avgRate} ({reviews}{isShowReviews ? ' reviews' : ''}) */}
+            <div>
+                {!avgRate && <span>New</span>}
+                {avgRate !== 0 && <span>{avgRate}
+                    <span className="num-of-review"> ({reviews + numOfReview})</span>
+                </span>}
+            </div>
         </section>
     )
 }
+// {<span>( + reviews + numOfReview + )</span>}
