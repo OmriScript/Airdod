@@ -13,15 +13,17 @@ export class _App extends Component {
     hideTopSearch: 'hiden',
     bgc: ''
   }
+  // if(typeof window.location.hash != "undefined" && window.location.hash == "#tab2")
 
   componentDidMount() {
-    this.props.getStays();
+    this.props.getStays()
     window.onscroll = () => {
-      if (window.pageYOffset >= 150) {
-        this.setState({ hideSearch: 'hiden', hideTopSearch: '', bgc: 'white' })
-
-      } else {
-        this.setState({ hideSearch: '', hideTopSearch: 'hiden', bgc: '' })
+      if (window.location.hash === '#/') {
+        if (window.pageYOffset >= 150) {
+          this.setState({ hideSearch: 'hiden', hideTopSearch: '', bgc: 'white' })
+        } else {
+          this.setState({ hideSearch: '', hideTopSearch: 'hiden', bgc: '' })
+        }
       }
     }
   }

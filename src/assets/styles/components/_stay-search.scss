@@ -10,9 +10,7 @@
         padding: 0.5rem;
         position: relative;
         &.hiden {
-            cursor: default;
-            visibility: hidden;
-            transition: ease-in-out .1s;
+            display: none;
         }
 
         .svg-inline--fa.fa-w-16 {

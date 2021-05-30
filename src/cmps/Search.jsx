@@ -13,8 +13,8 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons'
 class _Search extends Component {
 
     state = {
-        startDate: '',
-        endDate: '',
+        startDate: null,
+        endDate: null,
         filterBy: {
             country: '',
             guest: 0
@@ -42,6 +42,7 @@ class _Search extends Component {
     
 
     render() {
+        
         const {onToggleSearchBar, hideSearch ,hideTopSearch} = this.props
         return (
             <section className={`stay-search flex align-center`}>
