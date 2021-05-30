@@ -5,9 +5,9 @@ import SearchIcon from '@material-ui/icons/Search'
 import { DateRangePicker } from 'react-dates'
 import { connect } from 'react-redux'
 import { getStays } from '../store/actions/stay.actions.js'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSearch } from '@fortawesome/free-solid-svg-icons'
 
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import { faSearch } from '@fortawesome/free-solid-svg-icons'
 
 
 class _Search extends Component {
@@ -15,7 +15,6 @@ class _Search extends Component {
     state = {
         startDate: '',
         endDate: '',
-        isShown: false,
         filterBy: {
             country: '',
             guest: 0
@@ -40,17 +39,18 @@ class _Search extends Component {
         }
         this.props.getStays(filterBy)
     }
-    onToggleSearchBar = () => {
-        this.setState({ isShown: !this.state.isShown })
-    }
-
+    
 
     render() {
+        const {onToggleSearchBar, hideSearch ,hideTopSearch} = this.props
         return (
             <section className={`stay-search flex align-center`}>
-                <div className="search-bar" onClick={this.onToggleSearchBar}>222</div>
-                {this.state.isShown && <form
-                    className="flex"
+                <div className={`search-bar ${hideTopSearch}`} onClick={onToggleSearchBar}>
+                    start search...
+                <FontAwesomeIcon icon={faSearch} size="1x" />
+                </div>
+                <form
+                    className={`flex ${hideSearch}`}
                     onSubmit={this.onSubmitStay}
                 >
                     <div className="search-input country-input flex column justify-center">
@@ -103,7 +103,7 @@ class _Search extends Component {
                     <button className="primary-btn btn-grd">
                         <SearchIcon />
                     </button>
-                </form>}
+                </form>
             </section>
         )
     }
