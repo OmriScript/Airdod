@@ -27,7 +27,7 @@ export class _App extends Component {
   }
 
   onToggleSearchBar = () => {
-    this.setState({ isShown: !this.state.isShown })
+    this.setState({ hideSearch: this.state.hideSearch === ''?'hiden':'' })
 }
 
   componentWillUnmount() {
