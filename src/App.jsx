@@ -13,32 +13,36 @@ export class _App extends Component {
     hideTopSearch: 'hiden',
     bgc: ''
   }
+  // if(typeof window.location.hash != "undefined" && window.location.hash == "#tab2")
 
   componentDidMount() {
-    this.props.getStays();
+    this.props.getStays()
     window.onscroll = () => {
-      if (window.pageYOffset >= 150) {
-        this.setState({ hideSearch: 'hiden', hideTopSearch: '', bgc: 'white' })
-        
-      } else {
-        this.setState({ hideSearch: '', hideTopSearch: 'hiden', bgc: '' })
+      if (window.location.hash === '#/') {
+        if (window.pageYOffset >= 150) {
+          this.setState({ hideSearch: 'hiden', hideTopSearch: '', bgc: 'white' })
+
+        } else {
+          this.setState({ hideSearch: '', hideTopSearch: 'hiden', bgc: '' })
+        }
       }
     }
+
   }
 
   onToggleSearchBar = () => {
-    this.setState({ hideSearch: this.state.hideSearch === ''?'hiden':'' })
-}
+    this.setState({ hideSearch: this.state.hideSearch === '' ? 'hiden' : '' })
+  }
 
   componentWillUnmount() {
     window.onscroll = null;
   }
 
   render() {
-    const {hideSearch, hideTopSearch, bgc} = this.state
+    const { hideSearch, hideTopSearch, bgc } = this.state
     return (
       <div className="app main-container" >
-        <AppHeader bgc={bgc} hideTopSearch={hideTopSearch} onToggleSearchBar={this.onToggleSearchBar} hideSearch={hideSearch}/>
+        <AppHeader bgc={bgc} hideTopSearch={hideTopSearch} onToggleSearchBar={this.onToggleSearchBar} hideSearch={hideSearch} />
         <Switch>
           {routes.map(route => <Route key={route.path} exact component={route.component} path={route.path} />)}
         </Switch>
