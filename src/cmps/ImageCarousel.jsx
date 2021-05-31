@@ -6,13 +6,26 @@ import Slider from "react-slick";
 
 export class ImageCarousel extends React.Component {
 
+
+
+
+
+
+
+
     render() {
         const settings = {
             dots: true,
             // dots: <Dots />,
-            centerPadding: '200px',
+            centerPadding: '20px',
             nextArrow: <SampleNextArrow />,
             prevArrow: <SamplePrevArrow />,
+            // dotsClass: 'carousel-dots'
+
+            // appendDots: dots => (
+            //     <ul style={{ bottom: "5px", color: 'red' }}> {dots} </ul>
+            // ),
+
             // dotsClass: 'slick-dots mydot'
 
             // autoplay: true
@@ -20,7 +33,7 @@ export class ImageCarousel extends React.Component {
         const { imgsSrc } = this.props
 
         return (
-            <section>
+            <section className="image-carousel">
                 <Slider {...settings}>
 
                     {imgsSrc.map((imgSrc, idx) => {
