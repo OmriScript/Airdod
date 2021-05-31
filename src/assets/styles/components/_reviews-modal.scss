@@ -1,0 +1,57 @@
+.review-modal-overlay {
+    background-color: rgb(255, 255, 255);
+    width: rem(500px);
+    height: rem(400px);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: rem(8px);
+    box-shadow: 0 0 rem(5px) #00000070;
+    padding: rem(15px);
+}
+
+.review-modal {
+    
+    > * {
+        margin-left: rem(8px);
+    }
+
+    h2 {
+        font-family: Roboto-medium;
+        color: $clr3;
+        margin-top: rem(4px);
+    }
+
+    button {
+        color: $clr2;
+        background-color: $clr7;
+        border-radius: rem(8px);
+        width: rem(42px);
+        height: rem(42px);
+        position: absolute;
+        top: rem(12px);
+        right: rem(12px);
+
+        &:hover {
+            color: $clr6;
+        }
+    }
+
+    textarea {
+        font-family: Roboto-regular;
+        width: rem(300px);
+        height: rem(100px);
+        outline: none;
+        background-color: $clr7;
+        border: none;
+        border-radius: 8px;
+        font-size: 14px;
+        padding: 8px;
+        resize: none
+    }
+
+    fieldset {
+        margin: 1rem 0 0 0;
+    }
+}
