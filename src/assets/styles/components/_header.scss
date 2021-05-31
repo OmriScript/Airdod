@@ -13,17 +13,23 @@ header {
         }
     }
     &.white {
-        background-color: $clr1;
+        background-color: $clr1; 
+        box-shadow: $boxShadow1;
         transition: ease-in-out 0.2s;
         a {
             color: $clr3;
         }
     }
+    .app-header {
+        position: relative;
+        max-width: 1024px;
+        justify-content: space-between;
+        width: 100%;
+        .nav-link {
+            & *:not(:last-child){
+                margin-inline-end: 1rem;
+            }
+        }
+    }
 }
 
-.app-header {
-    position: relative;
-    max-width: 1024px;
-    justify-content: space-between;
-    width: 100%;
-}

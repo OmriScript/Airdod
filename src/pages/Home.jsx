@@ -1,12 +1,13 @@
 import { Component } from 'react'
 import { CityCard } from '../cmps/CityCard'
 import { connect } from 'react-redux'
-import { getStays } from '../store/actions/stay.actions.js'
+import { getStays, onSetCurrentPage } from '../store/actions/stay.actions.js'
 import { StayList } from '../cmps/StayList'
 
 class _Home extends Component {
 
     componentDidMount() {
+        this.props.onSetCurrentPage('home')
         window.scrollTo(0, 0)
     }
 
@@ -43,12 +44,14 @@ class _Home extends Component {
 
 function mapStateToProps(state) {
     return {
-        stays: state.stayModule.stays
+        stays: state.stayModule.stays,
+        currentPage: state.stayModule.currentPage
     }
 }
 
 const mapDispatchToProps = {
-    getStays
+    getStays,
+    onSetCurrentPage
 }
 
 export const Home = connect(mapStateToProps, mapDispatchToProps)(_Home)

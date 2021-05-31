@@ -7,6 +7,7 @@
 //Views
 @import "./views/home-page";
 @import "./views/stay_details";
+@import "./views/login-signup";
 
 // Basics
 @import "./basics/helpers";
@@ -25,9 +26,10 @@
 @import "./components/footer";
 @import "./components/asset-details";
 @import "./components/amenities";
+@import "./components/image-carousel";
+@import "./components/dropdown-filter";
 @import "./components/reviews";
-
-@import "./components/stay-search";
+@import "./components/stay-search"; 
 @import "./components/calender";
 
 @import "./components/stay-filter-2";

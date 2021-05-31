@@ -17,7 +17,7 @@ export function StayPreview({ stay }) {
                 <p>{stay.type} in {stay.loc.country}</p>
                 {/* <div className="description"> */}
                 {/* <h3>{stay.name}</h3> */}
-                <LongTxt txt={stay.summary} numOfChars={30} />
+                <LongTxt txt={stay.summary} numOfChars={28} />
                 {/* <ul className="clean-list flex">
                         {stay.amenities.map((amenity, idx) => {
                             return <li key={idx}>*{amenity}</li>

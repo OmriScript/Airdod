@@ -1,10 +1,9 @@
 import 'react-dates/initialize'
 import 'react-dates/lib/css/_datepicker.css';
 import { Component } from 'react'
-import SearchIcon from '@material-ui/icons/Search'
 import { DateRangePicker } from 'react-dates'
 import { connect } from 'react-redux'
-import { getStays } from '../store/actions/stay.actions.js'
+import { getStays, onSetCurrentPage } from '../store/actions/stay.actions.js'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 
@@ -13,12 +12,15 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons'
 class _Search extends Component {
 
     state = {
-        startDate: null,
-        endDate: null,
+        isShown: true,
         filterBy: {
             country: '',
             guest: 0
         }
+    }
+
+    componentDidMount(){
+        // console.log('DDD', this.props)
     }
 
     handleChange = ({ target }) => {
@@ -35,23 +37,26 @@ class _Search extends Component {
             startDate: startDate?._d || '',
             endDate: endDate?._d || '',
             country,
-            guest
+            guest: +guest
         }
         this.props.getStays(filterBy)
     }
+
+    onToggleSearchBar = () => {
+        this.setState({ isShown: !this.state.isShown})
+      }
     
 
     render() {
-        
-        const {onToggleSearchBar, hideSearch ,hideTopSearch} = this.props
+        const { hideSearch ,hideTopSearch, currentPage} = this.props
         return (
-            <section className={`stay-search flex align-center`}>
-                <div className={`search-bar ${hideTopSearch}`} onClick={onToggleSearchBar}>
+            <section className={`stay-search flex align-center `}>
+                <div className={`search-bar hidden`} onClick={this.onToggleSearchBar}>
                     start search...
-                <FontAwesomeIcon icon={faSearch} size="1x" />
+                <FontAwesomeIcon icon={faSearch} />
                 </div>
-                <form
-                    className={`flex ${hideSearch}`}
+                {this.state.isShown&&<form
+                    className={`flex`}
                     onSubmit={this.onSubmitStay}
                 >
                     <div className="search-input country-input flex column justify-center">
@@ -102,18 +107,24 @@ class _Search extends Component {
                         </div>
                     </div>
                     <button className="primary-btn btn-grd">
-                        <SearchIcon />
+                        <FontAwesomeIcon icon={faSearch} />
                     </button>
-                </form>
+                </form>}
             </section>
         )
     }
 }
 
 
-
-const mapDispatchToProps = {
-    getStays
+function mapStateToProps(state) {
+    return {
+        currentPage: state.stayModule.currentPage
+    }
 }
 
-export const Search = connect(null, mapDispatchToProps)(_Search)
+const mapDispatchToProps = {
+    getStays,
+    onSetCurrentPage
+}
+
+export const Search = connect(mapStateToProps, mapDispatchToProps)(_Search)
