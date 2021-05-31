@@ -2,11 +2,12 @@ import { Component } from 'react'
 import { connect } from 'react-redux'
 import { StayList } from '../cmps/StayList.jsx'
 import { StayFilter } from '../cmps/StayFilter.jsx'
-import { getStays } from '../store/actions/stay.actions.js'
+import { getStays, onSetCurrentPage } from '../store/actions/stay.actions.js'
 
 export class _StayApp extends Component {
 
     componentDidMount() {
+        this.props.onSetCurrentPage('stayapp')
         window.scrollTo(0, 0)
     }
 
@@ -31,7 +32,8 @@ function mapStateToProps(state) {
 }
 
 const mapDispatchToProps = {
-    getStays
+    getStays,
+    onSetCurrentPage
 }
 
 export const StayApp = connect(mapStateToProps, mapDispatchToProps)(_StayApp)

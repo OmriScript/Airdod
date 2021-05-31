@@ -5,7 +5,6 @@ import { StayRate } from '../cmps/StayRate.jsx'
 import { AvatarSymbol } from '../cmps/AvatarSymbol.jsx'
 import { StayBookModal } from '../cmps/StayBookModal.jsx'
 import { Amenities } from '../cmps/Amenities.jsx'
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHeart } from '@fortawesome/free-solid-svg-icons'
 

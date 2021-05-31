@@ -34,3 +34,9 @@ export function onRemoveStay(stayId) {
         }
     }
 }
+
+export function onSetCurrentPage(page) {
+    return dispach => {
+        dispach({ type: 'SET_CURRENTPAGE', page })
+    }
+}

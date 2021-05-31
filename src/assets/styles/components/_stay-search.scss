@@ -9,14 +9,18 @@
         background-color: transparent;
         padding: 0.5rem;
         position: relative;
-        &.hiden {
+        &.hidden {
             display: none;
         }
-
         .svg-inline--fa.fa-w-16 {
+            color: #fdfdfd;
+            border-radius: 50%;
+            background-color: #d70466;
             position: absolute;
-            right: em(10px);
-            font-size: 1.2rem;
+            right: em(2px);
+            top: em(2px);
+            font-size: 1.8rem;
+            padding: em(3px);
         }
     }
 
@@ -28,9 +32,8 @@
         cursor: pointer;
         border-radius: 2rem;
         background-color: $clr1;
-        &.hiden{
+        &.hiden {
             visibility: hidden;
-            transition: ease-in-out .1s;
         }
 
         label {

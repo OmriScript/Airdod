@@ -36,3 +36,16 @@
         margin-block-end: rem(75px);
     }
 }
+.mini-header{
+    header{
+        background-color: $clr1;
+    }
+    .stay-search {
+        form {
+            visibility: hidden;
+        }
+        .search-bar.hidden{
+            display: flex;
+        }
+    }
+}

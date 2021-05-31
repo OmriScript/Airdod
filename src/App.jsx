@@ -5,7 +5,7 @@ import { routes } from './routes'
 import { connect } from 'react-redux'
 import { AppHeader } from './cmps/AppHeader'
 import { Footer } from './cmps/Footer'
-import { getStays } from './store/actions/stay.actions.js'
+import { getStays, onSetCurrentPage } from './store/actions/stay.actions.js'
 
 export class _App extends Component {
   state = {
@@ -13,34 +13,26 @@ export class _App extends Component {
     hideTopSearch: 'hiden',
     bgc: ''
   }
-  // if(typeof window.location.hash != "undefined" && window.location.hash == "#tab2")
 
   componentDidMount() {
+    this.props.onSetCurrentPage('home')
+    console.log('DDD', this.props.currentPage)
     this.props.getStays()
+    
     window.onscroll = () => {
-      if (window.location.hash === '#/') {
-        if (window.pageYOffset >= 150) {
-          this.setState({ hideSearch: 'hiden', hideTopSearch: '', bgc: 'white' })
-        } else {
-          this.setState({ hideSearch: '', hideTopSearch: 'hiden', bgc: '' })
-        }
+      if (this.props.currentPage === 'home') { 
+        window.pageYOffset >= 150 ? document.body.classList.add('mini-header') : document.body.classList.remove('mini-header')
       }
     }
   }
 
-  onToggleSearchBar = () => {
-    this.setState({ hideSearch: this.state.hideSearch === '' ? 'hiden' : '' })
-  }
 
-  componentWillUnmount() {
-    window.onscroll = null;
-  }
 
   render() {
-    const { hideSearch, hideTopSearch, bgc } = this.state
+    const { hideSearch, hideTopSearch, isShown } = this.state
     return (
       <div className="app main-container" >
-        <AppHeader bgc={bgc} hideTopSearch={hideTopSearch} onToggleSearchBar={this.onToggleSearchBar} hideSearch={hideSearch} />
+        <AppHeader isShown={isShown} hideTopSearch={hideTopSearch} hideSearch={hideSearch} />
         <Switch>
           {routes.map(route => <Route key={route.path} exact component={route.component} path={route.path} />)}
         </Switch>
@@ -50,8 +42,16 @@ export class _App extends Component {
   }
 }
 
-const mapDispatchToProps = {
-  getStays
+function mapStateToProps(state) {
+  const { currentPage } = state.stayModule
+  return {
+    currentPage
+  }
 }
 
-export const App = connect(null, mapDispatchToProps)(_App)
+const mapDispatchToProps = {
+  getStays,
+  onSetCurrentPage
+}
+
+export const App = connect(mapStateToProps, mapDispatchToProps)(_App)

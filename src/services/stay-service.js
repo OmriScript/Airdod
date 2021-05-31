@@ -590,9 +590,10 @@ const gStays = [
     },
 ]
 
-asyncStorage._save(KEY, gStays);
+// asyncStorage._save(KEY, gStays)
 
 async function query(filterBy) {
+    
     // const toys = await axios.get(BASE_URL, { params: filterBy })
     // return toys.data
     const res = await asyncStorage.query(KEY, filterBy)
