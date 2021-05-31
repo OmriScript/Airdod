@@ -56,7 +56,7 @@ const gStays = [
                 by: {
                     _id: "u101",
                     fullname: "Vanessa",
-                    imgUrl: "/img/img1.jpg"
+                    imgUrl: "https://ozgrozer.github.io/100k-faces/0/7/007108.jpg"
                 }
             },
             {
@@ -140,7 +140,7 @@ const gStays = [
                 by: {
                     _id: "u101",
                     fullname: "Marcelo",
-                    imgUrl: "/img/img1.jpg"
+                    imgUrl: "https://ozgrozer.github.io/100k-faces/0/1/001720.jpg"
                 }
             },
             {
@@ -188,7 +188,7 @@ const gStays = [
         host: {
             _id: "51399391",
             fullname: "Jacquelina Pim",
-            imgUrl: "https://a0.muscache.com/im/pictures/fab79f25-2e10-4f0f-9711-663cb69dc7d8.jpg?aki_policy=profile_small"
+            imgUrl: "https://ozgrozer.github.io/100k-faces/0/6/006692.jpg"
         },
         loc: {
             country: "Portugal",
@@ -250,7 +250,7 @@ const gStays = [
                 by: {
                     _id: "u103",
                     fullname: "user3",
-                    imgUrl: "/img/img3.jpg"
+                    imgUrl: "https://ozgrozer.github.io/100k-faces/0/8/008731.jpg"
                 }
             }
         ]
@@ -302,7 +302,7 @@ const gStays = [
                 by: {
                     _id: "u101",
                     fullname: "user1",
-                    imgUrl: "/img/img1.jpg"
+                    imgUrl: "https://ozgrozer.github.io/100k-faces/0/8/008885.jpg"
                 }
             },
             {
@@ -312,7 +312,7 @@ const gStays = [
                 by: {
                     _id: "u102",
                     fullname: "user2",
-                    imgUrl: "/img/img2.jpg"
+                    imgUrl: "https://ozgrozer.github.io/100k-faces/0/8/008031.jpg"
                 }
             },
             {
@@ -322,7 +322,7 @@ const gStays = [
                 by: {
                     _id: "u103",
                     fullname: "user3",
-                    imgUrl: "/img/img3.jpg"
+                    imgUrl: "https://ozgrozer.github.io/100k-faces/0/2/002732.jpg"
                 }
             }
         ],
@@ -383,7 +383,7 @@ const gStays = [
                 by: {
                     _id: "u101",
                     fullname: "user1",
-                    imgUrl: "/img/img1.jpg"
+                    imgUrl: "https://ozgrozer.github.io/100k-faces/0/3/003068.jpg"
                 }
             },
             {
@@ -393,7 +393,7 @@ const gStays = [
                 by: {
                     _id: "u102",
                     fullname: "user2",
-                    imgUrl: "/img/img2.jpg"
+                    imgUrl: "https://ozgrozer.github.io/100k-faces/0/9/009532.jpg"
                 }
             },
             {
@@ -403,7 +403,7 @@ const gStays = [
                 by: {
                     _id: "u103",
                     fullname: "user3",
-                    imgUrl: "/img/img3.jpg"
+                    imgUrl: "https://ozgrozer.github.io/100k-faces/0/6/006772.jpg"
                 }
             },
             {
@@ -413,7 +413,7 @@ const gStays = [
                 by: {
                     _id: "u104",
                     fullname: "user4",
-                    imgUrl: "/img/img4.jpg"
+                    imgUrl: "https://ozgrozer.github.io/100k-faces/0/9/009694.jpg"
                 }
             }
         ],
@@ -474,7 +474,7 @@ const gStays = [
                 by: {
                     _id: "u101",
                     fullname: "user1",
-                    imgUrl: "/img/img1.jpg"
+                    imgUrl: "https://ozgrozer.github.io/100k-faces/0/5/005168.jpg"
                 }
             },
             {
@@ -484,7 +484,7 @@ const gStays = [
                 by: {
                     _id: "u102",
                     fullname: "user2",
-                    imgUrl: "/img/img2.jpg"
+                    imgUrl: "https://ozgrozer.github.io/100k-faces/0/7/007643.jpg"
                 }
             },
             {
@@ -494,7 +494,7 @@ const gStays = [
                 by: {
                     _id: "u103",
                     fullname: "user3",
-                    imgUrl: "/img/img3.jpg"
+                    imgUrl: "https://ozgrozer.github.io/100k-faces/0/8/008551.jpg"
                 }
             },
             {
@@ -504,7 +504,7 @@ const gStays = [
                 by: {
                     _id: "u104",
                     fullname: "user4",
-                    imgUrl: "/img/img4.jpg"
+                    imgUrl: "https://ozgrozer.github.io/100k-faces/0/5/005067.jpg"
                 }
             }
         ],

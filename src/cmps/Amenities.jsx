@@ -32,28 +32,28 @@ export function Amenities({ amenities }) {
             <h2>Amenities</h2>
             <div className="flex">
                 <div className="flex column">
-                    <div className={`amenity-container flex align-center ${!secured && 'missing'}`}>
+                    <div className={`amenity-container flex align-center ${!secured && 'missing'} first`}>
                         <FontAwesomeIcon icon={faShieldAlt} size="2x" />
                         <span>Compound is perfectly secured.</span>
                     </div>
-                    <div className={`amenity-container flex align-center ${!wifi && 'missing'}`}>
+                    <div className={`amenity-container flex align-center ${!wifi && 'missing'} first`}>
                         <FontAwesomeIcon icon={faWifi} size="2x" />
                         <span>Free Wi-fi.</span>
                     </div>
-                    <div className={`amenity-container flex align-center ${!parking && 'missing'}`}>
+                    <div className={`amenity-container flex align-center ${!parking && 'missing'} first`}>
                         <FontAwesomeIcon icon={faParking} size="2x" />
                         <span>Free street parking.</span>
                     </div>
-                    <div className={`amenity-container flex align-center ${!publicTransport && 'missing'}`}>
+                    <div className={`amenity-container flex align-center ${!publicTransport && 'missing'} first`}>
                         <FontAwesomeIcon icon={faBus} size="2x" />
                         <span>Public Transport on the street.</span>
                     </div>
-                    <div className={`amenity-container flex align-center ${!fastFood && 'missing'}`}>
+                    <div className={`amenity-container flex align-center ${!fastFood && 'missing'} first`}>
                         <FontAwesomeIcon icon={faPizzaSlice} size="2x" />
                         <span>Very close to fast food stores.</span>
                     </div>
                 </div>
-                <div className="flex column">
+                <div className="flex column second">
                     <div className={`amenity-container flex align-center ${!kitchen && 'missing'}`}>
                         <FontAwesomeIcon icon={faUtensils} size="2x" />
                         <span>Kitchen.</span>

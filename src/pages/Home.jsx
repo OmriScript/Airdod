@@ -1,14 +1,14 @@
+import { Component } from 'react'
 import { CityCard } from '../cmps/CityCard'
 import { connect } from 'react-redux'
 import { getStays } from '../store/actions/stay.actions.js'
 import { StayList } from '../cmps/StayList'
-import { Component } from 'react'
 
 class _Home extends Component {
+
     componentDidMount() {
         window.scrollTo(0, 0)
     }
-
 
     render() {
         const filterStays = this.props.stays.slice(0, 4)
