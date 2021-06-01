@@ -25,7 +25,8 @@ export class StayBookModal extends Component {
         return (
             <section className="stay-book-modal">
                 <div className="modal-header">
-                    <p>${stay.price} / night</p>
+                    <p><span className="price">${stay.price}</span> / night</p>
+
                     <StayRate stay={stay} />
                 </div>
                 <form onSubmit={this.handleSubmit}>
