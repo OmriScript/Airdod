@@ -16,7 +16,7 @@ export class Reviews extends Component {
     state = {
         modalIsOpen: false,
         review: {
-            rate: '',
+            rate: null,
             summary: ''
         }
     }
@@ -27,8 +27,18 @@ export class Reviews extends Component {
         this.setState({ review: { ...this.state.review, [field]: value } })
     }
 
+    onAddReview = ev => {
+        ev.preventDefault()
+        console.log(this.state.review);
+    }
+
     closeModal = () => {
         this.setState({ modalIsOpen: false })
+    }
+
+    openModal = () => {
+        
+        this.setState({ modalIsOpen: true })
     }
 
     render() {
@@ -62,10 +72,7 @@ export class Reviews extends Component {
                     })}
                 </div>
 
-                <button onClick={() => {
-                    this.setState({ modalIsOpen: true })
-                }}>Add review</button>
-
+                <button onClick={this.openModal}>Add review</button>
                 <Modal
                     isOpen={this.state.modalIsOpen}
                     // onAfterOpen={afterOpenModal}
@@ -74,9 +81,21 @@ export class Reviews extends Component {
                     overlayClassName="review-modal-overlay"
                 >
                     <h2>Add review</h2>
+                    <div className="review-writer-modal flex align-center">
+                        <div>
+                            <AvatarSymbol />
+                        </div>
+                        <div className="review-writer-modal-details flex column">
+                            <span>Asi ho gaon</span>
+                        </div>
+                    </div>
                     <form>
-                        <Box component="fieldset" mb={3} borderColor="transparent">
+                        <Box className="flex column" component="fieldset" mb={3} borderColor="transparent">
+                            <label
+                                className="rating-box-label"
+                                htmlFor="review-rating">Rate the host:</label>
                             <Rating
+                                id="review-rating"
                                 name="rate"
                                 value={this.state.review.rate}
                                 onChange={this.handleChange}
@@ -90,11 +109,15 @@ export class Reviews extends Component {
                                 type="text"
                                 name="summary"
                                 value={this.state.review.summary}
-                                placeholder="Describe your expirience" />
+                                placeholder="Describe your expirience." />
                         </div>
+                        <button
+                            onClick={this.onAddReview}
+                            className="add-review-btn"
+                        >Add</button>
                     </form>
 
-                    <button onClick={this.closeModal} className="close-modal-btn">
+                    <button className="exit-modal-btn" onClick={this.closeModal}>
                         <FontAwesomeIcon icon={faTimes} size="2x" />
                     </button>
                 </Modal>
