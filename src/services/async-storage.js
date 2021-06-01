@@ -10,14 +10,14 @@ export const asyncStorage = {
 
 async function query(entityType, filterBy = {
     price: "", amenities: "",
-    guest: 0, country: null, startDate: '', endDate: ''
+    guest: 0, city: null, startDate: '', endDate: ''
 }) {
     console.log('SERVICE', filterBy)
-    const { price, amenities, guest, country, startDate, endDate } = filterBy
+    const { price, amenities, guest, city, startDate, endDate } = filterBy
     try {
         const entities = await JSON.parse(localStorage.getItem(entityType)) || []
         const filterd = entities.filter(entity => {
-            return entity.capacity >= +guest && entity.loc.city === country
+            return entity.loc.city.includes(city) && entity.capacity >= guest
         })
         const newFilterdEnti = !filterd.length ? entities:filterd
         return newFilterdEnti
@@ -73,4 +73,5 @@ async function remove(entityType, entityId) {
 
 function _save(entityType, entities) {
     localStorage.setItem(entityType, JSON.stringify(entities))
+    
 }

@@ -1,13 +1,13 @@
 import { NavLink } from 'react-router-dom'
-import { Search } from './Search.jsx'
+import { StaySearch } from './StaySearch'
 
-export function AppHeader() {
+export function AppHeader({onToggleSearchBar, isShown}) {
 
     return (
         <header className={`flex justify-center full`}>
             <nav className="app-header flex ">
                 <NavLink to="/"><h1 className="logo">AirDoD</h1></NavLink>
-                <Search />
+                <StaySearch onToggleSearchBar={onToggleSearchBar} isShown={isShown} />
                 <ul className="nav-link clean-list flex">
                     <li ><NavLink to="/login">login</NavLink></li>
                     <li ><NavLink to="/signup">signup</NavLink></li>

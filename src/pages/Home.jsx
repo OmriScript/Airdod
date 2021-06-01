@@ -1,14 +1,20 @@
 import { CityCard } from '../cmps/CityCard'
 import { connect } from 'react-redux'
-import { getStays, onSetCurrentPage } from '../store/actions/stay.actions.js'
+import { getStays, onSetCurrentPage, onSetIsSearchMode } from '../store/actions/stay.actions.js'
 import { StayList } from '../cmps/StayList'
 import { Component } from 'react'
 
 class _Home extends Component {
     componentDidMount() {
         this.props.onSetCurrentPage('home')
+        this.props.onSetIsSearchMode(true)
         window.scrollTo(0, 0)
     }
+
+    componentWillUnmount() {
+        this.props.onSetIsSearchMode(false)
+    }
+
 
 
     render() {
@@ -30,7 +36,7 @@ class _Home extends Component {
                 <div className="best-loc justify-center flex">
                     <h2>Top rated homes</h2>
                     <div className="top-rated-container">
-                        <StayList stays={filterStays} />
+                        <StayList onSetCurrentPage={this.props.onSetCurrentPage} stays={filterStays} />
                     </div>
                 </div>
                 <div className="become-host">
@@ -45,13 +51,15 @@ class _Home extends Component {
 function mapStateToProps(state) {
     return {
         stays: state.stayModule.stays,
-        currentPage: state.stayModule.currentPage
+        currentPage: state.stayModule.currentPage,
+        isSearchMode: state.stayModule.isSearchMode
     }
 }
 
 const mapDispatchToProps = {
     getStays,
-    onSetCurrentPage
+    onSetCurrentPage,
+    onSetIsSearchMode
 }
 
 export const Home = connect(mapStateToProps, mapDispatchToProps)(_Home)

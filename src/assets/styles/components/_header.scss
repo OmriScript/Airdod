@@ -12,14 +12,6 @@ header {
             color: $clr1;
         }
     }
-    &.white {
-        background-color: $clr1; 
-        box-shadow: $boxShadow1;
-        transition: ease-in-out 0.2s;
-        a {
-            color: $clr3;
-        }
-    }
     .app-header {
         position: relative;
         max-width: 1024px;
