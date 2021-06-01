@@ -1576,7 +1576,7 @@ const gStays = [
     },
 ]
 
-// asyncStorage._save(KEY, gStays)
+asyncStorage._save(KEY, gStays)
 
 async function query(filterBy) {
     
