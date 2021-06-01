@@ -1,4 +1,13 @@
 .about-asset-container {
+    
+    padding: rem(32px) 0;
+    border-bottom: 1px solid $clr7;
+
+    & > * {
+        display: flex;
+        align-items: center;
+    }
+
     & > *:not(:last-child) {
         margin-bottom: rem(24px);
     }

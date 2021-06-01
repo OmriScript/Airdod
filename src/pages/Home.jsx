@@ -1,10 +1,11 @@
+import { Component } from 'react'
 import { CityCard } from '../cmps/CityCard'
 import { connect } from 'react-redux'
 import { getStays, onSetCurrentPage, onSetIsSearchMode } from '../store/actions/stay.actions.js'
 import { StayList } from '../cmps/StayList'
-import { Component } from 'react'
 
 class _Home extends Component {
+
     componentDidMount() {
         this.props.onSetCurrentPage('home')
         this.props.onSetIsSearchMode(true)
@@ -14,8 +15,6 @@ class _Home extends Component {
     componentWillUnmount() {
         this.props.onSetIsSearchMode(false)
     }
-
-
 
     render() {
         const filterStays = this.props.stays.slice(0, 4)

@@ -1,7 +1,6 @@
 .amenities-container {
     padding: rem(48px) 0;
     color: $clr3;
-    border-bottom: 1px solid $clr7;
 
     .missing {
         color: $clr6;
@@ -10,9 +9,13 @@
         }
     }
 
+    .first {
+        margin-right: rem(100px);
+    }
+
     .amenity-container {
-        margin-right: rem(42.5px);
         padding-bottom: rem(16px);
+        
     }
 
     h2 {

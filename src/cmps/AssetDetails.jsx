@@ -30,21 +30,21 @@ export function AssetDetails({ type, houseRules }) {
 
     return (
         <div className="about-asset-container">
-            <div className="about-asset-type flex">
+            <div>
                 <FontAwesomeIcon icon={faHome} size="2x" />
                 <div>
                     <h4>{type}</h4>
                     <p>{assetTypeDesc}</p>
                 </div>
             </div>
-            <div className="about-asset-clean flex">
+            <div>
                 <FontAwesomeIcon icon={faHandSparkles} size="2x" />
                 <div>
                     <h4>Enhanced Clean</h4>
                     <p>This host committed to Airdod's 5-step enhanced cleaning process.</p>
                 </div>
             </div>
-            <div className="about-asset-houserules flex">
+            <div>
                 <FontAwesomeIcon icon={faBook} size="2x" />
                 <div>
                     <h4>House rules</h4>

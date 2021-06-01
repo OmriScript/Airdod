@@ -5,13 +5,18 @@ import { StayRate } from '../cmps/StayRate.jsx'
 import { AvatarSymbol } from '../cmps/AvatarSymbol.jsx'
 import { StayBookModal } from '../cmps/StayBookModal.jsx'
 import { Amenities } from '../cmps/Amenities.jsx'
+import { LongTxt } from '../cmps/LongTxt.jsx'
+import { Reviews } from '../cmps/Reviews.jsx'
+import { GoogleMap } from '../cmps/GoogleMap.jsx'
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHeart } from '@fortawesome/free-solid-svg-icons'
+import { faHeart, faChevronRight } from '@fortawesome/free-solid-svg-icons'
 
 export class StayDetails extends Component {
 
     state = {
-        stay: {}
+        stay: {},
+        isShowMore: false,
     }
 
     componentDidMount() {
@@ -23,6 +28,11 @@ export class StayDetails extends Component {
         const { id } = this.props.match.params
         let stay = await stayService.getById(id)
         this.setState({ stay })
+    }
+
+    isOverChars = (summary) => {
+        if (summary.length >= 150) return true
+        return false
     }
 
     render() {
@@ -37,7 +47,8 @@ export class StayDetails extends Component {
             capacity,
             houseRules,
             amenities,
-            summary
+            summary,
+            reviews
         } = stay
 
         if (!stay) return <h1>reloading</h1>
@@ -50,8 +61,7 @@ export class StayDetails extends Component {
                         <div className="details-header-desc flex">
                             <StayRate
                                 stay={stay}
-                                isShowReviews={true}
-                            />
+                                isShowReviews={true} />
                             <span className="details-header-dot">·</span>
                             {loc && <a className="details-header-tags">
                                 {loc.address}</a>}
@@ -82,23 +92,44 @@ export class StayDetails extends Component {
                                 <AvatarSymbol />
                             </div>
                         </div>}
-                        <div className="asset-details-container">
+
+                        <div>
                             {houseRules && <AssetDetails
                                 type={type}
-                                houseRules={houseRules}
-                            />}
+                                houseRules={houseRules} />}
                         </div>
-                        <div className="about-asset-desc">
-                            <p>{summary}</p>
-                        </div>
+
+                        {summary && <div className="about-asset-desc">
+                            {this.state.isShowMore ?
+                                <p>{summary}</p> : <LongTxt txt={summary} numOfChars={150} />}
+
+                            {this.isOverChars(summary) && <button onClick={() => {
+                                this.setState({ isShowMore: !this.state.isShowMore })
+                            }}>{this.state.isShowMore ? 'Show Less' : 'Show more'}
+                                <FontAwesomeIcon icon={faChevronRight} />
+                            </button>}
+                        </div>}
+
                         {amenities && <div>
-                            <Amenities amenities={amenities}/>
+                            <Amenities amenities={amenities} />
                         </div>}
                     </div>
                     <div className="staybook-modal-container ">
                         <StayBookModal stay={stay} />
                     </div>
                 </section>
+
+                <section>
+                    {reviews && <Reviews
+                        stay={stay}
+                        reviews={reviews} />}
+                </section>
+
+                {loc && <section className="google-map-container">
+                    <h2>Location</h2>
+                    <span>{loc.address}</span>
+                    <GoogleMap loc={loc} />
+                </section>}
             </section>
         )
     }

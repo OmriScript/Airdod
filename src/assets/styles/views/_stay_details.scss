@@ -55,10 +55,10 @@
     padding-top: rem(48px);
 
     .host-header-container {
+        font-family: Roboto-light;
+        color: $clr3;
         padding-bottom: rem(24px);
         border-bottom: 1px solid $clr7;
-        color: $clr3;
-        font-family: Roboto-light;
 
         h2 {
             color: $clr3;
@@ -68,18 +68,30 @@
         }
     }
 
-    .asset-details-container {
-        padding: rem(32px) 0;
-        border-bottom: 1px solid $clr7;
-    }
-
-    .about-asset-desc{
+    .about-asset-desc {
         padding: rem(32px) 0 rem(48px);
         border-bottom: 1px solid $clr7;
+
         p {
             color: $clr3;
             font-family: Roboto-light;
             line-height: rem(24px);
+        }
+
+        button {
+            text-decoration: underline;
+            margin-top: 1rem;
+            font-size: 1rem;
+            color: $clr2;
+
+            &:hover {
+                color: $clr3;
+            }
+        }
+
+        svg {
+            margin-left: rem(4px);
+            font-size: 1rem;
         }
     }
 
