@@ -9,30 +9,39 @@ import { getStays, onSetCurrentPage } from './store/actions/stay.actions.js'
 
 export class _App extends Component {
   state = {
-    hideSearch: '',
-    hideTopSearch: 'hiden',
-    bgc: ''
+    // isShown: true
   }
 
   componentDidMount() {
     this.props.onSetCurrentPage('home')
-    console.log('DDD', this.props.currentPage)
     this.props.getStays()
-    
+    console.log('RRR', this.props.currentPage)
+
+    if (this.props.currentPage !== 'home') {
+      document.body.classList.add('hidden')
+    } else {
+      document.body.classList.remove('hidden')
+    }
     window.onscroll = () => {
-      if (this.props.currentPage === 'home') { 
+      if (this.props.currentPage === 'home') {
         window.pageYOffset >= 150 ? document.body.classList.add('mini-header') : document.body.classList.remove('mini-header')
       }
     }
   }
 
+  onToggleSearchBar = () => {
+    this.setState({ isShown: !this.state.isShown }, () => console.log(this.state))
+  }
 
+  componentWillUnmount() {
+    window.onscroll = null;
+  }
 
   render() {
-    const { hideSearch, hideTopSearch, isShown } = this.state
+    const { isShown } = this.state
     return (
       <div className="app main-container" >
-        <AppHeader isShown={isShown} hideTopSearch={hideTopSearch} hideSearch={hideSearch} />
+        <AppHeader isShown={isShown} onToggleSearchBar={this.onToggleSearchBar} />
         <Switch>
           {routes.map(route => <Route key={route.path} exact component={route.component} path={route.path} />)}
         </Switch>

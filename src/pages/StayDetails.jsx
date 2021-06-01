@@ -7,6 +7,7 @@ import { StayBookModal } from '../cmps/StayBookModal.jsx'
 import { Amenities } from '../cmps/Amenities.jsx'
 import { LongTxt } from '../cmps/LongTxt.jsx'
 import { Reviews } from '../cmps/Reviews.jsx'
+import { GoogleMap } from '../cmps/GoogleMap.jsx'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHeart, faChevronRight } from '@fortawesome/free-solid-svg-icons'
@@ -30,7 +31,7 @@ export class StayDetails extends Component {
     }
 
     isOverChars = (summary) => {
-        if (summary.length >= 150) return true 
+        if (summary.length >= 150) return true
         return false
     }
 
@@ -117,11 +118,18 @@ export class StayDetails extends Component {
                         <StayBookModal stay={stay} />
                     </div>
                 </section>
+
                 <section>
                     {reviews && <Reviews
                         stay={stay}
                         reviews={reviews} />}
                 </section>
+
+                {loc && <section className="google-map-container">
+                    <h2>Location</h2>
+                    <span>{loc.address}</span>
+                    <GoogleMap loc={loc} />
+                </section>}
             </section>
         )
     }
