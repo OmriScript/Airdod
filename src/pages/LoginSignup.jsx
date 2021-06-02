@@ -1,6 +1,7 @@
 import { Component } from 'react'
 import { connect } from 'react-redux'
-import { onSetCurrentPage } from '../store/actions/stay.actions.js'
+import { onSetCurrentPage } from '../store/actions/stay.actions'
+import { loadUsers } from '../store/actions/user.actions'
 
 class _LoginSignup extends Component {
     state = {
@@ -20,6 +21,7 @@ class _LoginSignup extends Component {
         const isSignup = this.props.match.path === '/login' ? 'login' : 'signup'
         this.props.onSetCurrentPage(isSignup)
         this.setState({ isSignup })
+        this.props.loadUsers()
     }
 
     handleChange = ({ target }) => {
@@ -78,8 +80,16 @@ class _LoginSignup extends Component {
     }
 }
 
+function mapStateToProps(state) {
+    const { users } = state.userModule
+    return {
+        users
+    }
+}
+
 const mapDispatchToProps = {
-    onSetCurrentPage
+    onSetCurrentPage,
+    loadUsers
 }
 
 export const LoginSignup = connect(null, mapDispatchToProps)(_LoginSignup)

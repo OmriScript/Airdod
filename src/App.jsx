@@ -15,7 +15,6 @@ export class _App extends Component {
   componentDidMount() {
     this.props.onSetCurrentPage('home')
     this.props.getStays()
-    console.log('RRR', this.props.currentPage)
 
     if (this.props.currentPage !== 'home') {
       document.body.classList.add('hidden')
@@ -30,7 +29,7 @@ export class _App extends Component {
   }
 
   onToggleSearchBar = () => {
-    this.setState({ isShown: !this.state.isShown }, () => console.log(this.state))
+    this.setState({ isShown: !this.state.isShown })
   }
 
   componentWillUnmount() {
